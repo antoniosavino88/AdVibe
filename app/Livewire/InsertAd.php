@@ -13,7 +13,6 @@ class InsertAd extends Component
     public $price;
     public $description;
     public $category_id;
-    public $categories;
     // public $users;
 
     public function adCreate(){
@@ -26,6 +25,7 @@ class InsertAd extends Component
         ]);
         // dd($this->categories);
         $this->clearForm();
+        return redirect()->route('insert_ad')->with('success', 'Annuncio creato con successo!');
     }
     protected function clearForm(){
          $this->title= '';

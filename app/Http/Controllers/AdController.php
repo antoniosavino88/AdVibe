@@ -13,9 +13,9 @@ class AdController extends Controller
      */
     public function insertAd()
     {
-        $categories = Category::all();
+        // $categories = Category::all();
 
-        return view('ad.insert_ad',compact('categories'));
+        return view('ad.insert_ad');
     }
 
     /**

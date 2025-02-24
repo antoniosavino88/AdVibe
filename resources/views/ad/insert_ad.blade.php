@@ -1,3 +1,3 @@
 <x-layout>
-    <livewire:insert-ad     :categories="$categories" />
+    <livewire:insert-ad />
 </x-layout>
