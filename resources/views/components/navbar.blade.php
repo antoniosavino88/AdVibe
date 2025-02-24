@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Ciao, {{ Auth::user()->name }}</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route("insert_ad")}}">Inserisci Annuncio</a>
+                    </li>
                     <form action='{{ route('logout') }}' method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger">Logout</button>
