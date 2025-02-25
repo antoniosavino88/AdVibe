@@ -1,4 +1,7 @@
 <x-layout>
+    @push('title')
+        AdVibe - Dettaglio
+    @endpush
     <div class="container">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">
