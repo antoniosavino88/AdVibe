@@ -2,10 +2,10 @@
     <!-- Grid container -->
     <div class="container p-4">
         <!--Grid row-->
-        <div class="row">
+        <div class="row justify-content-between">
             <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">AdVibe</h5>
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3">
+                <h5 class="text-uppercase py-2">AdVibe</h5>
 
                 <p>
                     Stai cercando qualcosa di unico? Vuoi vendere ciò che non usi più? AdVibe è il posto giusto per te!
@@ -14,15 +14,14 @@
                     con un'interfaccia intuitiva. Trova articoli di ogni tipo, dalle auto ai vestiti, dai mobili agli
                     animali domestici. I tuoi annunci saranno visti da migliaia di utenti interessati. La nostra
                     piattaforma è sicura e affidabile. Unisciti alla community di AdVibe! Pubblica i tuoi annunci
-                    gratuitamente e scopri le migliori offerte del web. AdVibe: il sito di annunci che fa vibrare la tua
-                    vita!
+                    gratuitamente e scopri le migliori offerte del web.
                 </p>
             </div>
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">DevAlchemy</h5>
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3 text-end">
+                <h5 class="text-uppercase py-2">DevAlchemy</h5>
 
                 <p>
                     DevAlchemy è il team di sviluppatori visionari che ha trasformato un'idea in realtà, creando AdVibe,
@@ -39,11 +38,6 @@
                     Curano ogni dettaglio di AdVibe, dal design all'implementazione delle funzionalità, garantendo
                     un'esperienza utente ottimale. Sono sempre alla ricerca di nuove tecnologie per migliorare
                     costantemente la piattaforma.
-
-                    La loro passione?
-
-                    Trasformare le idee in codice, dando vita a progetti ambiziosi come AdVibe. La loro alchimia
-                    digitale crea prodotti unici, destinati a lasciare il segno.
                 </p>
             </div>
             <!--Grid column-->

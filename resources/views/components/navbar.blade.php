@@ -16,8 +16,8 @@
                         aria-current="page" href="{{ route('ad_index') }}">Annunci</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link {{ Route::currentRouteName() == 'ad_category' ? 'active' : '' }} dropdown-toggle"
+                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
@@ -43,7 +43,8 @@
                 @endguest
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('insert_ad') }}">Inserisci Annuncio</a>
+                        <a class="nav-link {{ Route::currentRouteName() == 'insert_ad' ? 'active' : '' }}"
+                            href="{{ route('insert_ad') }}">Inserisci Annuncio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"

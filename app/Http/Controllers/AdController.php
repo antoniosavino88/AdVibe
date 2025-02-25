@@ -14,12 +14,12 @@ class AdController extends Controller implements HasMiddleware
      * Display a listing of the resource.
      */
 
-     public static function middleware(): array
-     {
-         return [
-             new Middleware('auth', only: ['insertAd']),
-         ];
-     }
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('auth', only: ['insertAd']),
+        ];
+    }
 
     public function insertAd()
     {
@@ -33,7 +33,7 @@ class AdController extends Controller implements HasMiddleware
      */
     public function adIndex()
     {
-        $ads = Ad::orderBy('created_at', 'desc')->paginate(6);
+        $ads = Ad::orderBy('created_at', 'desc')->paginate(8);
         return view('ad.ad_index', compact('ads'));
     }
 
@@ -76,8 +76,9 @@ class AdController extends Controller implements HasMiddleware
     {
         //
     }
-    public function adCategory(Category $category){
+    public function adCategory(Category $category)
+    {
         // $ads = Ad::all();
-        return view ('ad.ad_category', ['ads' => $category->ads, 'category' => $category]);
+        return view('ad.ad_category', ['ads' => $category->ads, 'category' => $category]);
     }
 }
