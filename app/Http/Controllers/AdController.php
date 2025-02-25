@@ -76,4 +76,8 @@ class AdController extends Controller implements HasMiddleware
     {
         //
     }
+    public function adCategory(Category $category){
+        // $ads = Ad::all();
+        return view ('ad.ad_category', ['ads' => $category->ads, 'category' => $category]);
+    }
 }
