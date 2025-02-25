@@ -4,18 +4,27 @@ namespace App\Livewire;
 
 use App\Models\Ad;
 use Livewire\Component;
+use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 
 class InsertAd extends Component
 {
 
+    #[Validate('required', message: 'Devi riempire il campo "Titolo"!')]
+    #[Validate('min:5', message: 'Il titolo della canzone deve avere minimo 5 caratteri!')]
     public $title;
+    #[Validate('required', message: 'Devi riempire il campo "Prezzo"!')]
     public $price;
+    #[Validate('required', message: 'Devi riempire il campo "Descrizione"!')]
     public $description;
+    #[Validate('required', message: 'Devi selezionare una categoria!')]
     public $category_id;
     // public $users;
 
     public function adCreate(){
+
+        $this->validate();
+
         Ad::create([
             'title' => $this->title,
             'description' => $this->description,

@@ -5,12 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class AdController extends Controller
+class AdController extends Controller implements HasMiddleware
 {
     /**
      * Display a listing of the resource.
      */
+
+     public static function middleware(): array
+     {
+         return [
+             new Middleware('auth', only: ['insertAd']),
+         ];
+     }
+
     public function insertAd()
     {
         // $categories = Category::all();

@@ -1,30 +1,47 @@
 <div>
     {{-- @dd($this->categories) --}}
-    <div>
+    <div class="container">
         <h2 class="display-3">Inserisci Annuncio</h2>
         <x-success />
-        <form wire:submit='adCreate'>
-            <div class="mb-3">
-                <label class="form-label">Titolo</label>
-                <input type="text" class="form-control" wire:model.blur='title'>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <form wire:submit='adCreate'>
+                    <div class="mb-3">
+                        <label class="form-label">Titolo</label>
+                        <input type="text" class="form-control" wire:model.blur='title'>
+                        @error('title')
+                            <div class="text-danger fst-italic"> {{ $message }} </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Prezzo</label>
+                        <input type="number" class="form-control" wire:model.blur='price'>
+                        @error('price')
+                            <div class="text-danger fst-italic"> {{ $message }} </div>
+                        @enderror
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Descrivi brano" wire:model.blur='description'></textarea>
+                        <label for="floatingTextarea">Descrizione</label>
+                        @error('description')
+                            <div class="text-danger fst-italic"> {{ $message }} </div>
+                        @enderror
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="categories">Seleziona categoria</label>
+                        <select wire:model="category_id" class="form-control">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('category_id')
+                            <div class="text-danger fst-italic"> {{ $message }} </div>
+                        @enderror
+                    </div>
+                    <button type="submit" class="btn btn-primary">Pubblica annuncio</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Prezzo</label>
-                <input type="number" class="form-control" wire:model.blur='price'>
-            </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Descrivi brano" wire:model.blur='description'></textarea>
-                <label for="floatingTextarea">Descrizione</label>
-            </div>
-            <div class="form-group">
-                <label for="categories">Seleziona categoria</label>
-                <select wire:model="category_id" class="form-control">
-                    @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Pubblica annuncio</button>
-        </form>
+        </div>
+
     </div>
 </div>
