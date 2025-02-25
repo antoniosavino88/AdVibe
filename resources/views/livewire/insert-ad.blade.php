@@ -1,7 +1,7 @@
 <div>
     {{-- @dd($this->categories) --}}
     <div class="container">
-        <h2 class="display-3">Inserisci Annuncio</h2>
+        <h2 class="text-center p-5">Inserisci Annuncio</h2>
         <x-success />
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
