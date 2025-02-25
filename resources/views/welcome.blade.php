@@ -29,9 +29,9 @@
                     </div>
                 @empty
                     <div class="col-12 text-center">
-                        <h3>
+                        <h4 class="text-muted fst-italic">
                             Nessun annuncio pubblicato
-                        </h3>
+                        </h4>
                     </div>
                 @endforelse
             </div>
