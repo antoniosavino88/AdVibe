@@ -11,6 +11,10 @@
                     <a class="nav-link {{ Route::currentRouteName() == 'welcome' ? 'active' : '' }}" aria-current="page"
                         href="{{ route('welcome') }}">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::currentRouteName() == 'ad_index' ? 'active' : '' }}" aria-current="page"
+                        href="{{ route('ad_index') }}">Annunci</a>
+                </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link {{ Route::currentRouteName() == 'register' ? 'active' : '' }}" href="#">Features</a>
                 </li>

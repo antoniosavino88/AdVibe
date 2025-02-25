@@ -31,9 +31,10 @@ class AdController extends Controller implements HasMiddleware
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function adIndex()
     {
-        //
+        $ads = Ad::orderBy('created_at', 'desc')->paginate(6);
+        return view('ad.ad_index', compact('ads'));
     }
 
     /**
@@ -47,9 +48,9 @@ class AdController extends Controller implements HasMiddleware
     /**
      * Display the specified resource.
      */
-    public function show(Ad $ad)
+    public function adShow(Ad $ad)
     {
-        //
+        return view('ad.ad_show', compact('ad'));
     }
 
     /**

@@ -11,7 +11,7 @@ class InsertAd extends Component
 {
 
     #[Validate('required', message: 'Devi riempire il campo "Titolo"!')]
-    #[Validate('min:5', message: 'Il titolo della canzone deve avere minimo 5 caratteri!')]
+    #[Validate('min:5', message: 'Il titolo dell\'annuncio deve avere minimo 5 caratteri!')]
     public $title;
     #[Validate('required', message: 'Devi riempire il campo "Prezzo"!')]
     public $price;
