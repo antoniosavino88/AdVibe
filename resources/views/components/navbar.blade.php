@@ -15,12 +15,20 @@
                     <a class="nav-link {{ Route::currentRouteName() == 'ad_index' ? 'active' : '' }}" aria-current="page"
                         href="{{ route('ad_index') }}">Annunci</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link {{ Route::currentRouteName() == 'register' ? 'active' : '' }}" href="#">Features</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                            <li><a class="dropdown-item text-capitalize" href="{{route('ad_category', ['category'=>$category])}}">{{ $category->name }}</a></li>
+                            @if (!$loop->last)
+                                <hr class="dropdown-divider">
+                            @endif
+                        @endforeach
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Route::currentRouteName() == 'register' ? 'active' : '' }}" href="#">Pricing</a>
-                </li> --}}
+            
                 @guest
                     <li class="nav-item">
                         <a class="nav-link {{ Route::currentRouteName() == 'register' ? 'active' : '' }}"
@@ -43,6 +51,7 @@
                         <button type="submit" class="btn btn-danger">Logout</button>
                     </form>
                 @endauth
+               
             </ul>
         </div>
     </div>
