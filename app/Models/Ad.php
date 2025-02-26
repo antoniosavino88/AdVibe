@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Laravel\Scout\Searchable;
 
-class Ad extends Model
+class Ad extends Model 
 {
-    // use Searchable;
+    use Searchable;
     
     protected $fillable = ['title', 'description', 'price','user_id','category_id'];
     public function user(): BelongsTo
