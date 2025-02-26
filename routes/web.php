@@ -18,3 +18,6 @@ Route::get('/revisor/index_rev', [RevisorController::class, 'indexRev'])->middle
 Route::patch('/accept/{ad}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{ad}', [RevisorController::class, 'reject'])->name('reject');
 
+// ROTTA MAIL REVISOR
+Route::get("/revisor/request",[RevisorController::class,'becomeRevisor'])->middleware('auth')->name("become.revisor");
+Route::get("/make/revisor/{user}",[RevisorController::class,'makeRevisor'])->name("make.revisor");
