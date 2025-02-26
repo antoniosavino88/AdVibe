@@ -50,6 +50,12 @@
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             href="#">Ciao, {{ ucfirst(Auth::user()->name) }}</a>
                         <ul class="dropdown-menu border-0">
+                            @if (Auth::user()->is_revisor)
+                                <li>
+                                    <a class="nav-link {{ Route::currentRouteName() == 'revisor.index' ? 'active' : '' }}"
+                                        aria-current="page" href="{{ route('revisor.index') }}">Revisore</a>
+                                </li>
+                            @endif
                             <li>
                                 <div class="btn btn-danger">
                                     <a class="dropdown-item logout-link " href="#"
