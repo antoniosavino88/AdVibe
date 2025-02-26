@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Ad extends Model
 {
-    protected $fillable = ['title', 'description', 'price','user_id','category_id']; 
+    protected $fillable = ['title', 'description', 'price','user_id','category_id'];
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
@@ -15,6 +15,13 @@ class Ad extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function setAccepted($value)
+    {
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
     }
 }
 

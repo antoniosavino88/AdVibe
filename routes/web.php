@@ -15,4 +15,6 @@ Route::get("/ad/{category}", [AdController::class,'adCategory'])->name("ad_categ
 
 // ROTTA REVISORE
 Route::get('/revisor/index_rev', [RevisorController::class, 'indexRev'])->name('revisor.index');
+Route::patch('/accept/{ad}', [RevisorController::class, 'accept'])->name('accept');
+Route::patch('/reject/{ad}', [RevisorController::class, 'reject'])->name('reject');
 

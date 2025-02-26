@@ -1,5 +1,10 @@
 <x-layout>
+    @push('title')
+        AdVibe - Revisore
+    @endpush
     <div class="container-fluid pt-5">
+        <x-success />
+        <x-error />
         <div class="row">
             <div class="col-3">
                 <div class="rounded shadow bg-body-secondary">
@@ -30,12 +35,14 @@
                         <p class="h6">{{ $ad_to_check->description }}</p>
                     </div>
                     <div class="d-flex pb-4 justify-content-around">
-                        <form action="" method="POST">
+                        <form action="{{ route('reject', ['ad' => $ad_to_check])}}" method="POST">
                             @csrf
+                            @method('PATCH')
                             <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
                         </form>
-                        <form action="" method="POST">
+                        <form action="{{ route('accept', ['ad' => $ad_to_check])}}" method="POST">
                             @csrf
+                            @method('PATCH')
                             <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
                         </form>
                     </div>
