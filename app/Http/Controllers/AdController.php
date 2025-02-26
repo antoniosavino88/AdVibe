@@ -82,4 +82,13 @@ class AdController extends Controller implements HasMiddleware
         $ads= $category->ads->where('is_accepted', true);
         return view('ad.ad_category', compact('ads', 'category'));
     }
+
+    public function searchAds(Request $request)
+    {
+        $query = $request->input('query');
+        $ads = Ad::search($query)->where('is_accepted', true)->paginate(10);
+        // $ads = Ad::search('Consequatur Volupta')->get();
+        // dd($ads);
+        return view('ad.ad_search', ['ads' => $ads, 'query' => $query]);
+    }
 }

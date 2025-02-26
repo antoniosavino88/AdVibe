@@ -21,3 +21,6 @@ Route::patch('/reject/{ad}', [RevisorController::class, 'reject'])->name('reject
 // ROTTA MAIL REVISOR
 Route::get("/revisor/request",[RevisorController::class,'becomeRevisor'])->middleware('auth')->name("become.revisor");
 Route::get("/make/revisor/{user}",[RevisorController::class,'makeRevisor'])->name("make.revisor");
+// ROTTA RICERCA ANNUNCI
+Route::get('/search/ad', [AdController::class, 'searchAds'])->name('ad_search');
+

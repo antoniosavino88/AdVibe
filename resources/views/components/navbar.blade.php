@@ -11,6 +11,7 @@
                     <a class="nav-link {{ Route::currentRouteName() == 'welcome' ? 'active' : '' }}" aria-current="page"
                         href="{{ route('welcome') }}">Home</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link {{ Route::currentRouteName() == 'ad_index' ? 'active' : '' }}"
                         aria-current="page" href="{{ route('ad_index') }}">Annunci</a>
@@ -68,6 +69,17 @@
                         </ul>
                     </li>
                 @endauth
+                <li>
+                    <form class="d-flex ms-auto" role="search" action="{{ route('ad_search') }}" method="GET">
+                        <div class="input-group">
+                            <input type="search" name="query" class="form-control" placeholder="Cerca annuncio"
+                                aria-label="search">
+                            <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </li>
             </ul>
         </div>
     </div>
