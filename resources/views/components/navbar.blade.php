@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('welcome') }}">AdVibe</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -48,7 +48,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            href="#">Ciao, {{ Auth::user()->name }}</a>
+                            href="#">Ciao, {{ ucfirst(Auth::user()->name) }}</a>
                         <ul class="dropdown-menu border-0">
                             <li>
                                 <div class="btn btn-danger">
