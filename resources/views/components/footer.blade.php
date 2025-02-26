@@ -1,0 +1,55 @@
+<footer class="bg-body-tertiary text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!--Grid row-->
+        <div class="row justify-content-between">
+            <!--Grid column-->
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3">
+                <h5 class="text-uppercase py-2">AdVibe</h5>
+
+                <p>
+                    Stai cercando qualcosa di unico? Vuoi vendere ciò che non usi più? AdVibe è il posto giusto per te!
+                    La nostra piattaforma di annunci gratuiti ti mette in contatto con acquirenti e venditori di tutta
+                    Italia. Con AdVibe puoi pubblicare i tuoi annunci in pochi clic e navigare tra migliaia di offerte
+                    con un'interfaccia intuitiva. Trova articoli di ogni tipo, dalle auto ai vestiti, dai mobili agli
+                    animali domestici. I tuoi annunci saranno visti da migliaia di utenti interessati. La nostra
+                    piattaforma è sicura e affidabile. Unisciti alla community di AdVibe! Pubblica i tuoi annunci
+                    gratuitamente e scopri le migliori offerte del web.
+                </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3 text-end">
+                <h5 class="text-uppercase py-2">DevAlchemy</h5>
+
+                <p>
+                    DevAlchemy è il team di sviluppatori visionari che ha trasformato un'idea in realtà, creando AdVibe,
+                    la piattaforma di annunci che sta rivoluzionando il mercato.
+
+                    Chi sono?
+
+                    Un gruppo di esperti appassionati di tecnologia, con una solida esperienza nello sviluppo di
+                    piattaforme web innovative. La loro missione è creare soluzioni digitali intuitive, performanti e
+                    user-friendly.
+
+                    Cosa fanno?
+
+                    Curano ogni dettaglio di AdVibe, dal design all'implementazione delle funzionalità, garantendo
+                    un'esperienza utente ottimale. Sono sempre alla ricerca di nuove tecnologie per migliorare
+                    costantemente la piattaforma.
+                </p>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2025 Copyright:
+        <a class="text-body" href="https://mdbootstrap.com/">AdVibe.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>

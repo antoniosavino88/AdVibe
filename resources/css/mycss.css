@@ -10,3 +10,9 @@
     background-color: var(--color-primary);
     color: var(--color-secondary);
 } */
+
+.logout-link:hover {
+    text-decoration: none;
+    background-color: inherit;
+    color: inherit;
+  }
