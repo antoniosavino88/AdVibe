@@ -18,3 +18,6 @@ Route::get('/revisor/index_rev', [RevisorController::class, 'indexRev'])->name('
 Route::patch('/accept/{ad}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{ad}', [RevisorController::class, 'reject'])->name('reject');
 
+// ROTTA RICERCA ANNUNCI
+Route::get('/search/ad', [AdController::class, 'searchAds'])->name('ad_search');
+
