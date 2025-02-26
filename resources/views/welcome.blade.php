@@ -3,6 +3,12 @@
         AdVibe
     @endpush
     <x-success />
+    {{-- Snippet messaggio reg Revisor --}}
+    @if(session()->has('errorMessage'))
+    <div class="alert alert-danger text-center shadow rounded wv-100">
+        {{ session('errorMessage') }}
+    </div>
+    @endif
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">

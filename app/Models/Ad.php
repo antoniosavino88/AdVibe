@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
 class Ad extends Model
 {
@@ -22,6 +23,10 @@ class Ad extends Model
         $this->is_accepted = $value;
         $this->save();
         return true;
+    }
+
+    public static function toBeRevisedCount(){
+        return Ad::where('is_accepted', null)->count();
     }
 }
 

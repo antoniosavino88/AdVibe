@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
 class RevisorController extends Controller
 {
@@ -22,6 +23,6 @@ class RevisorController extends Controller
     public function reject(Ad $ad)
     {
         $ad->setAccepted(false);
-        return redirect()->back()->with('error', "Hai rifiutato l'annuncio $ad->title");
+        return redirect()->back()->with('rejectMessage', "Hai rifiutato l'annuncio $ad->title");
     }
 }

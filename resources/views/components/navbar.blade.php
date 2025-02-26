@@ -53,7 +53,8 @@
                             @if (Auth::user()->is_revisor)
                                 <li>
                                     <a class="nav-link {{ Route::currentRouteName() == 'revisor.index' ? 'active' : '' }}"
-                                        aria-current="page" href="{{ route('revisor.index') }}">Revisore</a>
+                                        aria-current="page" href="{{ route('revisor.index') }}">Revisore
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span></a> 
                                 </li>
                             @endif
                             <li>
