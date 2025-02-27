@@ -101,7 +101,6 @@ body {
 .btn-category:hover{
     background-color: var(--color-tertiary) ;
 }
-  }
 
 .active {
     color: var(--color-quinary) !important;
