@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="display-4">Dettaglio dell'articolo: {{ $ad->title }}</h1>
+                <h1 class="display-4 text-title">Dettaglio dell'articolo: {{ $ad->title }}</h1>
             </div>
         </div>
 
@@ -38,9 +38,9 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-3 height-custom text-center">
-                <h2 class="display-5"><span class="fw-bold">Titolo: </span> {{ $ad->title }}</h2>
+                <h2 class="display-5 text-title"><span class="text-title">Titolo: </span> {{ $ad->title }}</h2>
                 <div class="d-flex flex-column justify-content-center h-75">
-                    <h4 class="fw-bold">Prezzo: {{ $ad->price }} €</h4>
+                    <h4>Prezzo: {{ $ad->price }} €</h4>
                     <h5>Descrizione:</h5>
                     <p>{{ $ad->description }}</p>
                 </div>
