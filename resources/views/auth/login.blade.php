@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <x-error />
             <div class="col-6">
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('login') }}" class="shadow p-4">
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">Email</label>
@@ -18,6 +18,7 @@
                         <input type="password" class="form-control" name="password">
                     </div>
                     <button type="submit" class="btn btn-primary">Accedi</button>
+                    <p class="mt-3">Non hai un account? <a href="{{ route('register') }}">Registrati</a></p>
                 </form>
             </div>
         </div>
