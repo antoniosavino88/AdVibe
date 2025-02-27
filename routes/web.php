@@ -14,7 +14,13 @@ Route::get("/ad_show/{ad}",[AdController::class,'adShow'])->name("ad_show");
 Route::get("/ad/{category}", [AdController::class,'adCategory'])->name("ad_category");
 
 // ROTTA REVISORE
-Route::get('/revisor/index_rev', [RevisorController::class, 'indexRev'])->name('revisor.index');
+Route::get('/revisor/index_rev', [RevisorController::class, 'indexRev'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{ad}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{ad}', [RevisorController::class, 'reject'])->name('reject');
+
+// ROTTA MAIL REVISOR
+Route::get("/revisor/request",[RevisorController::class,'becomeRevisor'])->middleware('auth')->name("become.revisor");
+Route::get("/make/revisor/{user}",[RevisorController::class,'makeRevisor'])->name("make.revisor");
+// ROTTA RICERCA ANNUNCI
+Route::get('/search/ad', [AdController::class, 'searchAds'])->name('ad_search');
 

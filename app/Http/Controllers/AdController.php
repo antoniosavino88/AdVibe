@@ -33,7 +33,7 @@ class AdController extends Controller implements HasMiddleware
      */
     public function adIndex()
     {
-        $ads = Ad::orderBy('created_at', 'desc')->paginate(8);
+        $ads = Ad::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
         return view('ad.ad_index', compact('ads'));
     }
 
@@ -79,6 +79,16 @@ class AdController extends Controller implements HasMiddleware
     public function adCategory(Category $category)
     {
         // $ads = Ad::all();
-        return view('ad.ad_category', ['ads' => $category->ads, 'category' => $category]);
+        $ads= $category->ads->where('is_accepted', true);
+        return view('ad.ad_category', compact('ads', 'category'));
+    }
+
+    public function searchAds(Request $request)
+    {
+        $query = $request->input('query');
+        $ads = Ad::search($query)->where('is_accepted', true)->paginate(10);
+        // $ads = Ad::search('Consequatur Volupta')->get();
+        // dd($ads);
+        return view('ad.ad_search', ['ads' => $ads, 'query' => $query]);
     }
 }

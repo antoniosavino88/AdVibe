@@ -4,7 +4,12 @@
     @endpush
     <div class="container-fluid pt-5">
         <x-success />
-        <x-error />
+        {{-- Messaggio di rifiuto annuncio --}}
+        @if(session()->has('rejectMessage'))
+        <div class="alert alert-danger text-center shadow rounded wv-100">
+            {{ session('rejectMessage') }}
+        </div>
+        @endif
         <div class="row">
             <div class="col-3">
                 <div class="rounded shadow bg-body-secondary">
