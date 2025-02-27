@@ -10,6 +10,7 @@
     --color-tertiary: #50c4c9;
     --color-quaternary: #7a76f0;
     --color-quinary: #f4695d;
+    --color-sixth: #F5B83D;
 }
 
 /* FONT */
@@ -45,7 +46,7 @@ body {
     background-color: var(--color-quaternary);
 }
 .bg-5 {
-    background-color: var(--color-quinary); 
+    background-color: var(--color-quinary);
 }
 .bg-6 {
     background-color: #F5B83D;
@@ -73,8 +74,42 @@ body {
 .logo {
     max-width: 120px;
 }
+
 .logout-link:hover {
     text-decoration: none;
     background-color: inherit;
     color: inherit;
-  } 
+  }
+
+.active {
+    color: var(--color-quinary) !important;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: var(--color-quinary) !important;
+}
+
+.dropdown-toggle.show{
+    color: var(--color-quinary) !important;
+}
+
+.dropdown-item:hover{
+    background-color: var(--color-secondary) !important;
+    color: var(--color-quinary) !important;
+}
+
+.border-custom {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.border-custom2 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
