@@ -4,7 +4,7 @@
     --color-tertiary: #F5B83D;
     --color-quaternary: #227C9D;
     --color-quinary: #D62828; */
-
+    
     --color-secondary: #001829;
     --color-primary: #f8f8f8;
     --color-tertiary: #50c4c9;
@@ -14,8 +14,8 @@
 
 /* FONT */
 :root {
---font-primary: "Montserrat", sans-serif;
---font-secondary: "Karla", sans-serif;
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Karla", sans-serif;
 }
 
 /* FONT APPLICATI */
@@ -24,7 +24,7 @@
 }
 .text-title {
     font-family:var(--font-primary);
-  }
+}
 
 body {
     background-color: var(--color-primary);
@@ -68,6 +68,9 @@ body {
     color: var(--color-quinary);
 }
 
+.transition {
+    transition: all 0.3s ease-in-out;
+}
 
 /* NAVBAR */
 .logo {
@@ -77,4 +80,22 @@ body {
     text-decoration: none;
     background-color: inherit;
     color: inherit;
-  } 
+} 
+
+/* CARDS */
+.card-container{
+    width: 18rem;
+
+}
+.img-card{
+    width: 100%;
+    border-radius: 7px 7px 0px 0px; 
+}
+
+.btn-dettaglio:hover{
+    background-color: var(--color-quinary) ;
+}
+
+.btn-category:hover{
+    background-color: var(--color-tertiary) ;
+}
