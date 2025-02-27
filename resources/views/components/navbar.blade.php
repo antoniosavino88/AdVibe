@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+<nav class="navbar navbar-expand-lg bg-1 shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('welcome') }}">AdVibe</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ Route::currentRouteName() == 'welcome' ? 'active' : '' }}" aria-current="page"
+                    <a class="nav-link text-color-2  {{ Route::currentRouteName() == 'welcome' ? 'active' : '' }}" aria-current="page"
                         href="{{ route('welcome') }}">Home</a>
                 </li>
 
