@@ -9,7 +9,7 @@ class PublicController extends Controller
 {
     public function welcome()
     {
-        $ads = Ad::where('is_accepted', true)->orderBy('created_at', 'desc')->take(6)->get();
+        $ads = Ad::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
         return view('welcome', compact('ads'));
     }
 }

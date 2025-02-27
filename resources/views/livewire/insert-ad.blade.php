@@ -16,13 +16,13 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Prezzo</label>
-                        <input type="number" class="form-control" wire:model.blur='price'>
+                        <input type="number" step="0.01" class="form-control" wire:model.blur='price'>
                         @error('price')
                             <div class="text-danger fst-italic"> {{ $message }} </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Descrivi brano" wire:model.blur='description'></textarea>
+                        <textarea class="form-control" placeholder="Descrivi annuncio" wire:model.blur='description'></textarea>
                         <label for="floatingTextarea">Descrizione</label>
                         @error('description')
                             <div class="text-danger fst-italic"> {{ $message }} </div>

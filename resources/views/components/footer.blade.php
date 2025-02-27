@@ -1,4 +1,4 @@
-<footer class="bg-body-tertiary text-center text-lg-start">
+<footer class="bg-2 text-color-1 text-center text-lg-start">
     <!-- Grid container -->
     <div class="container p-4">
         <!--Grid row-->
@@ -46,7 +46,7 @@
         <div class="col-12 justify-content-start offset-md-1 mb-4 ">
             <h5>Vuoi diventare revisore?</h5>
             <p>Cliccando qui:</p>
-            <a href="{{ route('become.revisor')}}" class="btn btn-success">Diventa revisore</a>
+            <a href="{{ route('become.revisor')}}" class="btn bg-5">Diventa revisore</a>
         </div>
     </div>
     <!-- Grid container -->
