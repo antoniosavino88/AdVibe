@@ -12,10 +12,25 @@
     --color-quinary: #f4695d;
 }
 
+/* FONT */
+:root {
+--font-primary: "Montserrat", sans-serif;
+--font-secondary: "Karla", sans-serif;
+}
+
+/* FONT APPLICATI */
+* {
+    font-family: var(--font-secondary);
+}
+.text-title {
+    font-family:var(--font-primary);
+  }
+
 body {
     background-color: var(--color-primary);
     color: var(--color-secondary);
 }
+
 /* COLORI BACKGROUND */
 .bg-1 {
     background-color: var(--color-primary);
@@ -54,8 +69,12 @@ body {
 }
 
 
+/* NAVBAR */
+.logo {
+    max-width: 120px;
+}
 .logout-link:hover {
     text-decoration: none;
     background-color: inherit;
     color: inherit;
-  }
+  } 
