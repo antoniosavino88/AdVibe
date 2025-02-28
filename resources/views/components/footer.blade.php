@@ -6,7 +6,7 @@
             <!--Grid column-->
             <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3">
                 <h5 class="text-uppercase py-2">AdVibe</h5>
-                
+
                 <p>
                     Stai cercando qualcosa di unico? Vuoi vendere ciò che non usi più? AdVibe è il posto giusto per te!
                     La nostra piattaforma di annunci gratuiti ti mette in contatto con acquirenti e venditori di tutta
@@ -18,23 +18,23 @@
                 </p>
             </div>
             <!--Grid column-->
-            
+
             <!--Grid column-->
             <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3 text-end">
                 <h5 class="text-uppercase py-2">DevAlchemy</h5>
-                
+
                 <p>
                     DevAlchemy è il team di sviluppatori visionari che ha trasformato un'idea in realtà, creando AdVibe,
                     la piattaforma di annunci che sta rivoluzionando il mercato.
-                    
+
                     Chi sono?
-                    
+
                     Un gruppo di esperti appassionati di tecnologia, con una solida esperienza nello sviluppo di
                     piattaforme web innovative. La loro missione è creare soluzioni digitali intuitive, performanti e
                     user-friendly.
-                    
+
                     Cosa fanno?
-                    
+
                     Curano ogni dettaglio di AdVibe, dal design all'implementazione delle funzionalità, garantendo
                     un'esperienza utente ottimale. Sono sempre alla ricerca di nuove tecnologie per migliorare
                     costantemente la piattaforma.
@@ -46,15 +46,15 @@
         <div class="col-12 justify-content-start offset-md-1 mb-4 ">
             <h5>Vuoi diventare revisore?</h5>
             <p>Cliccando qui:</p>
-            <a href="{{ route('become.revisor')}}" class="btn bg-5">Diventa revisore</a>
+            <a href="{{ route('become.revisor') }}" class="btn bg-5">Diventa revisore</a>
         </div>
     </div>
     <!-- Grid container -->
-    
+
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2025 Copyright:
-        <a class="text-body" href="https://mdbootstrap.com/">AdVibe.com</a>
+
+        <p class="fs-none"> © 2025 Copyright: DevAlchemy</p>
     </div>
     <!-- Copyright -->
 </footer>
