@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center p-5">Annunci</h1>
+                <h1 class="text-center p-5 text-title">Annunci</h1>
             </div>
 
         </div>
@@ -16,12 +16,18 @@
                 </div>
 
             @empty
-                <div class="col-12 text-center d-flex justify-content-center">
+                <div class="col-12 text-center d-flex flex-column justify-content-center">
                     <h4 class="text-muted fst-italic">
                         Nessun annuncio pubblicato
                     </h4>
                     @auth
-                        <a href="{{ route('insert_ad') }}" class="btn btn-primary ">Inserisci annuncio</a>
+                        <div class="container my-3">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-6 d-flex justify-content-center">
+                                    <a href="{{ route('insert_ad') }}" class="btn btn-custom ">Inserisci annuncio</a>
+                                </div>
+                            </div>
+                        </div>
                     @endauth
                 </div>
             @endforelse
