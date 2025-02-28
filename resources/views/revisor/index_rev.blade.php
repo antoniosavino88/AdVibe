@@ -17,44 +17,44 @@
                     </div>
                 </div>
             @endif
-            <div class="col-3">
-                <div class="rounded shadow bg-body-secondary">
-                    <h1 class="display-5 text-center pb-2">
+            <div class="col-12">
+                <div>
+                    <h1 class="text-center pb-2 display-4 fw-semibold">
                         Revisor Dashboard
                     </h1>
                 </div>
             </div>
         </div>
         @if ($ad_to_check)
-            <div class="row justify-content-center pt-5">
-                <div class="col-md-8">
+            <div class="row justify-content-center py-5">
+                <div class="col-md-6">
                     <div class="row justify-content-center">
-                        @for ($i = 0; $i < 6; $i++)
-                            <div class="col-6 col-md-4 mb-4 text-center">
+                        @for ($i = 0; $i < 4; $i++)
+                            <div class="col-6 col-md-6 text-center p-3">
                                 <img src="https://picsum.photos/300" class="img-fluid rounded shadow"
                                     alt="Immgìagine segnaposto">
                             </div>
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
+                <div class="col-md-6 ps-4 d-flex flex-column justify-content-between"> 
                     <div>
-                        <h1>{{ $ad_to_check->title }}</h1>
+                        <h1 class="pt-2 text-start">{{ $ad_to_check->title }}</h1>
                         <h3>Autore: {{ $ad_to_check->user->name }}</h3>
                         <h4>{{ $ad_to_check->price }}€</h4>
                         <h4 class="fst-italic text-muted">#{{ $ad_to_check->category->name }}</h4>
                         <p class="h6">{{ $ad_to_check->description }}</p>
                     </div>
-                    <div class="d-flex pb-4 justify-content-around">
+                    <div class="d-flex justify-content-around">
                         <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
+                            <button class="btn mb-3 bg-5 py-2 px-5 fw-bold">Rifiuta</button>
                         </form>
                         <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
+                            <button class="btn mb-3 bg-4 py-2 px-5 fw-bold">Accetta</button>
                         </form>
                     </div>
                 </div>

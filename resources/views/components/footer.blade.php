@@ -5,8 +5,9 @@
         <div class="row justify-content-between">
             <!--Grid column-->
             <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3">
-                <h5 class="text-uppercase py-2">AdVibe</h5>
-
+                <a class="navbar-brand" href="{{ route('welcome') }}">
+                    <img class="logo transition py-2" src="{{ asset('./media/logo.png') }}" alt="">
+                </a>
                 <p>
                     Stai cercando qualcosa di unico? Vuoi vendere ciò che non usi più? AdVibe è il posto giusto per te!
                     La nostra piattaforma di annunci gratuiti ti mette in contatto con acquirenti e venditori di tutta
@@ -16,6 +17,12 @@
                     piattaforma è sicura e affidabile. Unisciti alla community di AdVibe! Pubblica i tuoi annunci
                     gratuitamente e scopri le migliori offerte del web.
                 </p>
+                <!--Grid row-->
+                <div class="col-12 d-flex justify-content-start">
+                    <h5 class="align-content-center m-0 fw-bold">Vuoi diventare revisore?</h5>
+                    {{-- <p>Cliccando qui:</p> --}}
+                    <a href="{{ route('become.revisor') }}" class="btn bg-5 fw-bold text-color-1 ms-5">Clicca qui</a>
+                </div>
             </div>
             <!--Grid column-->
 
@@ -40,14 +47,8 @@
                     costantemente la piattaforma.
                 </p>
             </div>
-            <!--Grid column-->
         </div>
-        <!--Grid row-->
-        <div class="col-12 justify-content-start offset-md-1 mb-4 ">
-            <h5>Vuoi diventare revisore?</h5>
-            <p>Cliccando qui:</p>
-            <a href="{{ route('become.revisor') }}" class="btn bg-5">Diventa revisore</a>
-        </div>
+
     </div>
     <!-- Grid container -->
 
@@ -58,3 +59,7 @@
     </div>
     <!-- Copyright -->
 </footer>
+
+
+
+

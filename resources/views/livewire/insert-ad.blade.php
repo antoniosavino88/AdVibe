@@ -39,7 +39,7 @@
                             <div class="text-danger fst-italic"> {{ $message }} </div>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Pubblica</button>
+                    <button type="submit" class="btn btn-custom transition fs-5 btn-sm my-3 px-3 py-0">Pubblica</button>
                 </form>
             </div>
         </div>

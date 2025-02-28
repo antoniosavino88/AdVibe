@@ -25,7 +25,7 @@
                         <label class="form-label">Conferma password</label>
                         <input type="password" class="form-control" name="password_confirmation">
                     </div>
-                    <button type="submit" class="btn btn-primary">Registrati</button>
+                    <button type="submit" class="btn btn-custom transition fs-5 btn-sm my-3 px-3 py-0">Registrati</button>
                 </form>
             </div>
         </div>
