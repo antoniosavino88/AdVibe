@@ -37,7 +37,7 @@
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-6 ps-4 d-flex flex-column justify-content-between"> 
+                <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
                     <div>
                         <h1 class="pt-2 text-start">{{ $ad_to_check->title }}</h1>
                         <h3>Autore: {{ $ad_to_check->user->name }}</h3>

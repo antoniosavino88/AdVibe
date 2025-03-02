@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu bg-2">
                         @foreach ($categories as $category)
                             <li>
-                                <a class="dropdown-item text-capitalize text-color-1"
+                                <a class="dropdown-item dropdown-item-category text-capitalize text-color-1"
                                     href="{{ route('ad_category', ['category' => $category]) }}">
                                     {{ $category->name }}
                                 </a>
@@ -100,8 +100,8 @@
                                 </li>
                             @endif
                             <li>
-                                <div class="btn btn-danger">
-                                    <a class="dropdown-item logout-link" href="#"
+                                <div class="btn btn-danger ms-1 p-0">
+                                    <a class="dropdown-item text-color-1 logout-link transition" href="#"
                                         onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">
                                         Logout
                                     </a>
