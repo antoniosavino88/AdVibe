@@ -25,7 +25,7 @@
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-                            <h3 class="text-center">Benvenuto <span class="text-color-5">{{ ucfirst(auth()->user()->name) }}</span>,
+                            <h3 class="text-center">Benvenuto<span class="text-color-5">{{ ucfirst(auth()->user()->name) }}</span>,
                                 inizia a pubblicare annunci!</h3>
                             {{-- <h4>Inizia subito a pubblicare i tuoi annunci!</h4> --}}
                             <div class="container">

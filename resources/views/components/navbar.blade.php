@@ -52,6 +52,10 @@
                         </div>
                     </form>
                 </li>
+               <x-locale lang="it"/>
+               <x-locale lang="en"/>
+               <x-locale lang="es"/>
+
                 @guest
                     <li class="nav-item">
                         <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'register' ? 'active' : '' }}"

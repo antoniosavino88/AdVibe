@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center p-5 text-title">Annunci</h1>
+                <h1 class="text-center p-5 text-title">{{ __('ui.allAds') }}</h1>
             </div>
 
         </div>

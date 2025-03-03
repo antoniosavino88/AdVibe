@@ -23,4 +23,6 @@ Route::get("/revisor/request",[RevisorController::class,'becomeRevisor'])->middl
 Route::get("/make/revisor/{user}",[RevisorController::class,'makeRevisor'])->name("make.revisor");
 // ROTTA RICERCA ANNUNCI
 Route::get('/search/ad', [AdController::class, 'searchAds'])->name('ad_search');
+//rotta bandiere
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
