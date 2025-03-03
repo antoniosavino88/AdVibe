@@ -12,6 +12,11 @@
 
     <div class="container header-custom">
         <div class="row justify-content-center">
+            @if (session()->has('message'))
+                <div class="alert alert-success text-center shadow rounded w-50">
+                    {{ session('message') }}
+                </div>
+            @endif
             <div class="col-md-12 d-flex justify-content-center">
                 {{-- <h1 class="p-5 text-center ">AdVibe HomePage</h1> --}}
                 <img src="./media/header.png" alt="" class="img-header img-fluid">
@@ -20,7 +25,7 @@
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-                            <h3 class="text-center">Benvenuto <span class="text-color-5">{{ auth()->user()->name }}</span>,
+                            <h3 class="text-center">Benvenuto <span class="text-color-5">{{ ucfirst(auth()->user()->name) }}</span>,
                                 inizia a pubblicare annunci!</h3>
                             {{-- <h4>Inizia subito a pubblicare i tuoi annunci!</h4> --}}
                             <div class="container">
