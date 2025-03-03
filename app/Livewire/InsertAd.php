@@ -4,11 +4,16 @@ namespace App\Livewire;
 
 use App\Models\Ad;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 
 class InsertAd extends Component
 {
+    use WithFileUploads;
+
+    public $images = [];
+    public $temporary_images;
 
     #[Validate('required', message: 'Devi riempire il campo "Titolo"!')]
     #[Validate('min:5', message: 'Il titolo dell\'annuncio deve avere minimo 5 caratteri!')]
@@ -21,25 +26,55 @@ class InsertAd extends Component
     public $category_id;
     // public $users;
 
-    public function adCreate(){
+    public function adCreate()
+    {
 
         $this->validate();
 
-        Ad::create([
+        $ad = Ad::create([
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
             'category_id' => $this->category_id,
             'user_id' => Auth::user()->id
         ]);
-        // dd($this->categories);
+
+        if (count($this->images) > 0) {
+            foreach ($this->images as $image) {
+                $ad->images()->create([
+                    'path' => $image->store('images', 'public')
+                ]);
+            }
+        }
+
         $this->clearForm();
         return redirect()->route('insert_ad')->with('success', 'Annuncio creato con successo!');
     }
-    protected function clearForm(){
-         $this->title= '';
-         $this->price= '';
-         $this->description= '';
+    protected function clearForm()
+    {
+        $this->title = '';
+        $this->price = '';
+        $this->description = '';
+        $this->images = [];
+    }
+
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+            'temporary_images' => 'max:6'
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
     }
 
     public function render()

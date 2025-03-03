@@ -25,16 +25,22 @@
                 </div>
             </div>
         </div>
-        @if ($ad_to_check)
+        @if (!empty($ad_to_check->images))
             <div class="row justify-content-center py-5">
                 <div class="col-md-6">
                     <div class="row justify-content-center">
-                        @for ($i = 0; $i < 4; $i++)
+                        {{-- @for ($i = 0; $i < 4; $i++)
                             <div class="col-6 col-md-6 text-center p-3">
                                 <img src="https://picsum.photos/300" class="img-fluid rounded shadow"
                                     alt="Immgìagine segnaposto">
                             </div>
-                        @endfor
+                        @endfor --}}
+                        @foreach ($ad_to_check->images as $key => $image)
+                            <div class="col-6 col-md-4 mb-4">
+                                <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow"
+                                    alt="Immagine {{ $key + 1 }} dell'articolo '{{ $ad_to_check->title }}'">
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
@@ -60,6 +66,11 @@
                 </div>
             </div>
         @else
+            {{-- @for ($i = 0; $i < 6; $i++)
+                <div class="col-6 col-md-4 mb-4 text-center">
+                    <img src="https://picsum.photos/300" alt="immagine segnaposto" class="img-fluid rounded shadow">
+                </div>
+            @endfor --}}
             <div class="row justify-content-center align-items-center height-custom text-center">
                 <div class="col-12">
                     <h1 class="fst-italic display-4">Nessun articolo da revisionare</h1>

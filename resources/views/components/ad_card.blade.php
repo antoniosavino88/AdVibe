@@ -1,6 +1,7 @@
 <div class="card my-3 rounded shadow bg-1 text-color-2 card-container border-0">
     <div class="card-body p-0">
-        <img src="https://picsum.photos/200" alt="immagine annuncio" class="img-card">
+        <img src="{{ $ad->images->isNotEmpty() ? Storage::url($ad->images->first()->path) : 'https://picsum.photos/300' }}"
+            alt="{{ $ad->title }}" class="img-card">
         <div class="p-3">
             <h5 class="card-title text-center text-truncate text-title">{{ $ad->title }}</h5>
             <div class="d-flex justify-content-between align-items-center">
