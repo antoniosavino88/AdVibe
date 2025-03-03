@@ -22,12 +22,11 @@
                     @if (!Auth::user()->is_revisor)
                         <div class="col-12 d-flex justify-content-start">
                             <h5 class="align-content-center m-0 fw-bold">Vuoi diventare revisore?</h5>
-                            <a href="{{ route('become.revisor') }}" class="btn bg-5 fw-bold text-color-1 ms-5">Clicca
+                            <a href="{{ route('become.revisor') }}" class="btn btn-custom transition m-5 fw-bold fs-5">Clicca
                                 qui</a>
                         </div>
                     @endif
                 @endauth
-
             </div>
             <!--Grid column-->
 

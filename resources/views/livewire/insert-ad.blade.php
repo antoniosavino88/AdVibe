@@ -1,6 +1,6 @@
 <div>
     {{-- @dd($this->categories) --}}
-    <div class="container">
+    <div class="container my-5">
         <h2 class="text-center p-5 text-title">Inserisci Annuncio</h2>
         <div class="row justify-content-center">
             <x-success />

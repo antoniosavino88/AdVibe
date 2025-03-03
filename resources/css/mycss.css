@@ -146,6 +146,23 @@ body {
     border-bottom-right-radius: 20px;
 }
 
+@keyframes vibrateWithPause {
+    0%, 20% { transform: translateX(0); }  /* Stato iniziale e pausa */
+    30% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    50% { transform: translateX(-2px); }
+    60% { transform: translateX(2px); }
+    70%, 100% { transform: translateX(0); } /* Ritorna in posizione e pausa */
+}
+
+.vibrate {
+    display: inline-block;
+    animation: vibrateWithPause 0.8s infinite;
+    color: var(--color-quaternary);
+    font-weight: bold;
+}
+
+
 /* HOMEPAGE */
 .header-custom {
     margin-top: 35vh;
@@ -177,6 +194,27 @@ body {
 
 .btn-category:hover {
     background-color: var(--color-tertiary);
+}
+
+/* revisore */
+.btn-custom-accept {
+    color: var(--color-secondary);
+    border-color: var(--color-quaternary);
+}
+
+.btn-custom-accept:hover {
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
+}
+
+.btn-custom-reject {
+    color: var(--color-secondary);
+    border-color: var(--color-quinary);
+}
+
+.btn-custom-reject:hover {
+    background-color: var(--color-quinary);
+    color: var(--color-primary);
 }
 
 
