@@ -95,16 +95,9 @@ body {
 
 .logout-link:hover {
     background-color: inherit;
-<<<<<<< HEAD
-    color: inherit;
-  } 
-
-
-=======
     color: var(--color-secondary);
     border-radius: 5px;
 }
->>>>>>> 74bb424be9542161a9281377319a46757cecdd52
 
 .btn-search {
     color: var(--color-quinary);
@@ -188,29 +181,3 @@ body {
 
 
 
-<<<<<<< HEAD
-.dropdown-toggle.show {
-    color: var(--color-quinary) !important;
-}
-
-.dropdown-item:hover {
-    background-color: var(--color-secondary) !important;
-    color: var(--color-quinary) !important;
-}
-
-.border-custom {
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.border-custom2 {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-}
-
-=======
->>>>>>> 74bb424be9542161a9281377319a46757cecdd52
