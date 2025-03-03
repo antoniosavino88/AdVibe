@@ -1,11 +1,11 @@
 <x-layout>
     @push('title')
-        AdVibe - Categorie
+        {{ __('ui.appName') }} - {{ __('ui.categories') }}
     @endpush
     <div class="container">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
-                <h1 class="display-2">Annunci della categoria <span
+                <h1 class="display-2">{{ __('ui.adsInCategory') }} <span
                         class="fst-italic fw-bold">{{ $category->name }}</span></h1>
             </div>
         </div>
@@ -17,10 +17,10 @@
             @empty
                 <div class="col-12 text-center">
                     <h3>
-                        Non sono ancora stati creati annunci per questa categoria!
+                        {{ __('ui.noAdsInCategory') }}
                     </h3>
                     @auth
-                        <a class="btn btn-dark my-5" href="{{ route('insert_ad') }}">Pubblica un annuncio</a>
+                        <a class="btn btn-dark my-5" href="{{ route('insert_ad') }}">{{ __('ui.publishAd') }}</a>
                     @endauth
                 </div>
             @endforelse

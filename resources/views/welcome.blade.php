@@ -1,6 +1,6 @@
 <x-layout>
     @push('title')
-        AdVibe
+        {{ __('ui.appName') }}
     @endpush
     <x-success />
     {{-- Snippet messaggio reg Revisor --}}
@@ -19,21 +19,20 @@
             @endif
             <div class="col-md-12 d-flex justify-content-center">
                 {{-- <h1 class="p-5 text-center ">AdVibe HomePage</h1> --}}
-                <img src="./media/header.png" alt="" class="img-header img-fluid">
+                <img src="./media/header.png" alt="{{ __('ui.headerImageAlt') }}" class="img-header img-fluid">
             </div>
             @auth
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-                            <h3 class="text-center">Benvenuto <span class="text-color-5">{{ ucfirst(auth()->user()->name) }}</span>,
-                                inizia a pubblicare annunci!</h3>
+                            <h3 class="text-center">{{ __('ui.welcomeUser') }}<span class="text-color-5">{{ ucfirst(auth()->user()->name) }}</span>,
+                                {{ __('ui.startPublishing') }}</h3>
                             {{-- <h4>Inizia subito a pubblicare i tuoi annunci!</h4> --}}
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-12 col-md-8 d-flex justify-content-center">
                                         <a href="{{ route('insert_ad') }}"
-                                            class="btn btn-custom transition fs-4 m-5">Inserisci
-                                            annuncio</a>
+                                            class="btn btn-custom transition fs-4 m-5">{{ __('ui.insertAd') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -45,14 +44,14 @@
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-                            <h3 class="text-center">Benvenuto,
-                                registrati per pubblicare annunci!</h3>
+                            <h3 class="text-center">{{ __('ui.welcomeGuest') }}
+                                {{ __('ui.registerToPublish') }}</h3>
                             {{-- <h4>Inizia subito a pubblicare i tuoi annunci!</h4> --}}
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-12 col-md-8 d-flex justify-content-center">
                                         <a href="{{ route('register') }}"
-                                            class="btn btn-custom transition fs-4 m-5">Registrati</a>
+                                            class="btn btn-custom transition fs-4 m-5">{{ __('ui.register') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +65,7 @@
     <div class="container">
         <div class="row justify-content-center pb-5">
             <h2 class="text-center p-5">
-                Ultimi Annunci
+                {{ __('ui.latestAds') }}
             </h2>
             <div class="row justify-content-evenly">
                 @forelse ($ads as $ad)
@@ -76,7 +75,7 @@
                 @empty
                     <div class="col-12 text-center">
                         <h4 class="text-muted fst-italic">
-                            Nessun annuncio pubblicato
+                            {{ __('ui.noAdsPublished') }}
                         </h4>
                     </div>
                 @endforelse
