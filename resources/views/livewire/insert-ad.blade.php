@@ -75,7 +75,7 @@
                     @endif
 
                     <button type="submit"
-                        class="btn btn-custom transition fs-5 btn-sm my-3 px-3 py-0">Pubblica</button>
+                        class="btn btn-custom transition fs-5 btn-sm my-3 px-3 py-0">{{ __('ui.publish') }}</button>
                 </form>
             </div>
         </div>
