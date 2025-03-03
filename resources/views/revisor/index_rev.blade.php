@@ -1,6 +1,6 @@
 <x-layout>
     @push('title')
-        AdVibe - Revisore
+        {{ __('ui.adVibe') }} - {{ __('ui.revisor') }}
     @endpush
     <div class="container-fluid pt-5">
         <div class="row">
@@ -8,7 +8,7 @@
             @if (session()->has('rejectMessage'))
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col d-flex  justify-content-center">
+                        <div class="col d-flex justify-content-center">
                             {{-- Messaggio di rifiuto annuncio --}}
                             <div class="alert alert-danger text-center shadow rounded w-50">
                                 {{ session('rejectMessage') }}
@@ -20,7 +20,7 @@
             <div class="col-12">
                 <div>
                     <h1 class="text-center pb-2 display-4 fw-semibold">
-                        Revisor Dashboard
+                        {{ __('ui.revisorDashboard') }}
                     </h1>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                         @for ($i = 0; $i < 4; $i++)
                             <div class="col-6 col-md-6 text-center p-3">
                                 <img src="https://picsum.photos/300" class="img-fluid rounded shadow"
-                                    alt="Immgìagine segnaposto">
+                                    alt="{{ __('ui.placeholderImage') }}">
                             </div>
                         @endfor
                     </div>
@@ -40,7 +40,7 @@
                 <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
                     <div>
                         <h1 class="pt-2 text-start">{{ $ad_to_check->title }}</h1>
-                        <h3>Autore: {{ $ad_to_check->user->name }}</h3>
+                        <h3>{{ __('ui.author') }}: {{ ucfirst($ad_to_check->user->name) }}</h3>
                         <h4>{{ $ad_to_check->price }}€</h4>
                         <h4 class="fst-italic text-muted">#{{ $ad_to_check->category->name }}</h4>
                         <p class="h6">{{ $ad_to_check->description }}</p>
@@ -49,12 +49,12 @@
                         <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn mb-3 bg-5 py-2 px-5 fw-bold">Rifiuta</button>
+                            <button class="btn mb-3 bg-5 py-2 px-5 fw-bold">{{ __('ui.reject') }}</button>
                         </form>
                         <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn mb-3 bg-4 py-2 px-5 fw-bold">Accetta</button>
+                            <button class="btn mb-3 bg-4 py-2 px-5 fw-bold">{{ __('ui.accept') }}</button>
                         </form>
                     </div>
                 </div>
@@ -62,8 +62,8 @@
         @else
             <div class="row justify-content-center align-items-center height-custom text-center">
                 <div class="col-12">
-                    <h1 class="fst-italic display-4">Nessun articolo da revisionare</h1>
-                    <a href="{{ route('welcome') }}" class="mt-5 btn btn-custom">Torna all'homepage</a>
+                    <h1 class="fst-italic display-4">{{ __('ui.noArticlesToReview') }}</h1>
+                    <a href="{{ route('welcome') }}" class="mt-5 btn btn-custom">{{ __('ui.backToHomepage') }}</a>
                 </div>
             </div>
         @endif

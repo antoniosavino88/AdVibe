@@ -11,5 +11,5 @@ php artisan scout:status
 
 <!-- comandi pacchetto outhebox/blade-flags  -->
 
-1- composer require outhebox/blade-flags;
-2- flags --force;
+1- composer require outhebox/blade-flags
+2- php artisan vendor:publish --tag=blade-flags --force

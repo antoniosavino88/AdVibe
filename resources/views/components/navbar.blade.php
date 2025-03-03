@@ -52,10 +52,42 @@
                         </div>
                     </form>
                 </li>
-               <x-locale lang="it"/>
+                {{-- <x-locale lang="it"/>
                <x-locale lang="en"/>
-               <x-locale lang="es"/>
-
+               <x-locale lang="es"/> --}}
+                @php
+                    $currentLang = session('locale', 'it'); // Lingua corrente (default: IT)
+                    $languages = [
+                        'it' => 'Italiano',
+                        'en' => 'English',
+                        'es' => 'Español',
+                    ];
+                @endphp
+                <li class="dropdown">
+                    <button class="btn bg-2 dropdown-toggle d-flex align-items-center" type="button"
+                        id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="32"
+                            height="32" class="me-2" />
+                    </button>
+                    <ul class="dropdown-menu bg-2" aria-labelledby="languageDropdown">
+                        @foreach ($languages as $lang => $name)
+                            @if ($lang !== $currentLang)
+                                <!-- Evita di ripetere la lingua attuale -->
+                                <li>
+                                    <form action="{{ route('setLocale', $lang) }}" method="POST"
+                                        class="d-flex align-items-center">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item d-flex align-items-center">
+                                            <img src="{{ asset('vendor/blade-flags/language-' . $lang . '.svg') }}"
+                                                width="24" height="24" class="me-2" />
+                                            <span class="text-color-1 dropdown-item-category ">{{ $name }}</span>
+                                        </button>
+                                    </form>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
                 @guest
                     <li class="nav-item">
                         <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'register' ? 'active' : '' }}"
