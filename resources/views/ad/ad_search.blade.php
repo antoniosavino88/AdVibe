@@ -1,12 +1,12 @@
 <x-layout>
     @push('title')
-        AdVibe - Search
+        {{ __('ui.appName') }} - {{ __('ui.search') }}
     @endpush
     <div class="container-fluid">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12">
                 <h1 class="display-1">
-                    Risultati per la ricerca
+                    {{ __('ui.resultsForSearch') }}
                     <span class="fst-italic">{{ $query }}</span>
                 </h1>
             </div>
@@ -20,7 +20,7 @@
             @empty
                 <div class="col-12">
                     <h3 class="text-center">
-                        Nessun articolo corrisponde alla tua ricerca
+                        {{ __('ui.noResultsFound') }}
                     </h3>
                 </div>
             @endforelse
@@ -30,5 +30,4 @@
             {{ $ads->links() }}
         </div>
     </div>
-
 </x-layout>

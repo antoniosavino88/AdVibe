@@ -1,11 +1,10 @@
 <div>
-    {{-- @dd($this->categories) --}}
     <div class="container my-5">
         <h2 class="text-center p-5 text-title">Inserisci Annuncio</h2>
         <div class="row justify-content-center">
             <x-success />
             <div class="col-12 col-md-6">
-                {{-- <x-error /> --}}
+                {{-- <x-error /> --}} 
                 <form wire:submit='adCreate' class="shadow rounded p-5">
                     <div class="mb-3">
                         <label class="form-label">Titolo</label>
