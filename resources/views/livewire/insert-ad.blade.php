@@ -6,7 +6,7 @@
             <x-success />
             <div class="col-12 col-md-6">
                 {{-- <x-error /> --}}
-                <form wire:submit='adCreate'>
+                <form wire:submit='adCreate' class="shadow rounded p-5">
                     <div class="mb-3">
                         <label class="form-label">Titolo</label>
                         <input type="text" class="form-control" wire:model.blur='title'>

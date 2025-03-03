@@ -84,9 +84,13 @@
                             href="{{ route('insert_ad') }}">Inserisci Annuncio</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-color-1" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" href="#">
+                        <a class="nav-link dropdown-toggle position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Ciao, {{ ucfirst(Auth::user()->name) }}
+                            @if (App\Models\Ad::toBeRevisedCount() > 0)
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{ App\Models\Ad::toBeRevisedCount() }}
+                                </span>
+                            @endif
                         </a>
                         <ul class="dropdown-menu border-0 bg-2">
                             @if (Auth::user()->is_revisor)

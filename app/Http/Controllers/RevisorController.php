@@ -32,6 +32,7 @@ class RevisorController extends Controller
     }
 
     public function becomeRevisor(){
+
         Mail::to('admin@advibe.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->route('welcome')->with('message', 'Richiesta inviata con successo!');
     }
