@@ -97,7 +97,9 @@ body {
     text-decoration: none;
     background-color: inherit;
     color: inherit;
-}
+  } 
+
+
 
 .btn-search {
     color: var(--color-quinary);
@@ -173,3 +175,4 @@ body {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
+

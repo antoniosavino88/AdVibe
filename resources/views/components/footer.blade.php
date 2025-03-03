@@ -43,7 +43,7 @@
             <!--Grid column-->
         </div>
         <!--Grid row-->
-        <div class="col-12 justify-content-start offset-md-1 mb-4 ">
+        <div class="col-12 justify-content-start offset-md-1 mb-4">
             <h5>Vuoi diventare revisore?</h5>
             <p>Cliccando qui:</p>
             <a href="{{ route('become.revisor') }}" class="btn bg-5">Diventa revisore</a>
