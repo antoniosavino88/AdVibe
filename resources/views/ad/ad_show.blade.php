@@ -23,13 +23,13 @@
                             <img src="https://picsum.photos/400" class="d-block w-100 rounded shadow" alt="{{ __('ui.adImage') }}">
                         </div>
                     </div>
-                    
+
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">{{ __('ui.previous') }}</span>
                 </button>
-                
+
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -43,7 +43,7 @@
                         <div class="carousel-inner">
                             @foreach ($ad->images as $key => $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">
-                                    <img src="{{ Storage::url($image->path) }}" class="d-block w-100 rounded shadow"
+                                    <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100 rounded shadow"
                                         alt="Immagine{{ $key + 1 }} dell'articolo {{ $ad->title }}">
                                 </div>
                             @endforeach

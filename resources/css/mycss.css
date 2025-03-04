@@ -9,7 +9,7 @@
     --color-secondary: #001829;
     --color-secondary-op: #0018299e;
     --color-tertiary: #50c4c9;
-    --color-quaternary: #7a76f0;
+    --color-quaternary: #bd89ad;
     --color-quinary: #f4695d;
     --color-sixth: #f5b83d;
 }
@@ -171,7 +171,7 @@ body {
 .vibrate {
     display: inline-block;
     animation: vibrateWithPause 0.8s infinite;
-    color: var(--color-quaternary);
+    color: var(--color-tertiary);
     font-weight: bold;
 }
 

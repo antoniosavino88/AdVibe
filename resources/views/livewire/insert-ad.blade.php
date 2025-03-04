@@ -58,7 +58,7 @@
                     @if (!empty($images))
                         <div class="row">
                             <div class="col-12">
-                                <p>Photo preview:</p>
+                                <p>{{ __('ui.preview') }}:</p>
                                 <div class="row border-preview-custom rounded shadow py-4">
                                     @foreach ($images as $key => $image)
                                         <div class="col d-flex flex-column align-items-center my-3">

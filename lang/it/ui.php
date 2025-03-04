@@ -88,4 +88,10 @@ return [
     'Viaggi' => 'Viaggi',
     'Animali' => 'Animali',
     'Altro' => 'Altro',
+    // File inserimento img
+    'preview' => 'Anteprima foto',
+    'choose_file' => 'Scegli file',
+    'success'=>'Operazione avvenuta con successo!',
+    'rejectMessage' => 'Hai rifiutato l\'annuncio',
+    'successMessageRevisor'=> 'Richiesta avvenuta con successo!',
 ];
