@@ -91,7 +91,8 @@ return [
     // File inserimento img
     'preview' => 'Photo preview',
     'choose_file' => 'Choose file',
-    'success'=> 'Operation completed successfully!',
+    'success' => 'Operation completed successfully!',
     'rejectMessage' => 'You have rejected the ad',
-    'successMessageRevisor'=> 'Request completed successfully!',
+    'successMessageRevisor' => 'Request completed successfully!',
+    'category' => 'Category',
 ];

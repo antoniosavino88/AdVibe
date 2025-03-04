@@ -31,6 +31,7 @@
                     <div class="form-group mb-3">
                         <label for="categories">{{ __('ui.selectCategory') }}</label>
                         <select wire:model="category_id" class="form-control">
+                            <option value="1">---</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach

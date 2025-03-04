@@ -92,7 +92,8 @@ return [
     // File inserimento img
     'preview' => 'Vista previa de la foto',
     'choose_file' => 'Elegir archivo',
-    'success'=> '¡Operación completada con éxito!',
+    'success' => '¡Operación completada con éxito!',
     'rejectMessage' => 'Has rechazado el anuncio',
     'successMessageRevisor' => 'Solicitud completada con éxito!',
+    'category' => 'Categoría',
 ];
