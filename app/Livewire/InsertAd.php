@@ -54,7 +54,7 @@ class InsertAd extends Component
         }
 
         $this->clearForm();
-        return redirect()->route('insert_ad')->with('success', 'Annuncio creato con successo!');
+        return redirect()->route('insert_ad')->with('success', ' ');
     }
     protected function clearForm()
     {

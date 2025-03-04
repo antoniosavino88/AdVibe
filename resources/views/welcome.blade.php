@@ -14,7 +14,7 @@
         <div class="row justify-content-center">
             @if (session()->has('message'))
                 <div class="alert alert-success text-center shadow rounded w-50">
-                    {{ session('message') }}
+                    {{ __('ui.successMessageRevisor') }}
                 </div>
             @endif
             <div class="col-md-12 d-flex justify-content-center">

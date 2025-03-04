@@ -11,7 +11,7 @@
                         <div class="col d-flex justify-content-center">
                             {{-- Messaggio di rifiuto annuncio --}}
                             <div class="alert alert-danger text-center shadow rounded w-50">
-                                {{ session('rejectMessage') }}
+                                {{__('ui.rejectMessage') }}
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <h1 class="pt-2 text-start">{{ $ad_to_check->title }}</h1>
                         <h3>{{ __('ui.author') }}: {{ ucfirst($ad_to_check->user->name) }}</h3>
                         <h4>{{ $ad_to_check->price }}€</h4>
-                        <h4 class="fst-italic text-muted">#{{ $ad_to_check->category->name }}</h4>
+                        <h4 class="fst-italic text-muted">#{{ __('ui.' . $ad_to_check->category->name) }}</h4>
                         <p class="h6">{{ $ad_to_check->description }}</p>
                     </div>
                     <div class="d-flex justify-content-around">
@@ -60,7 +60,7 @@
                         <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn mb-3 bg-4 py-2 px-5 fw-bold">{{ __('ui.accept') }}</button>
+                            <button class="btn mb-3 bg-3 py-2 px-5 fw-bold">{{ __('ui.accept') }}</button>
                         </form>
                     </div>
                 </div>

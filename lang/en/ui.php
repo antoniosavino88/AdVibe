@@ -88,4 +88,10 @@ return [
     'Viaggi' => 'Travel',
     'Animali' => 'Pets',
     'Altro' => 'Other',
+    // File inserimento img
+    'preview' => 'Photo preview',
+    'choose_file' => 'Choose file',
+    'success'=> 'Operation completed successfully!',
+    'rejectMessage' => 'You have rejected the ad',
+    'successMessageRevisor'=> 'Request completed successfully!',
 ];

@@ -28,7 +28,7 @@
                             <li>
                                 <a class="dropdown-item dropdown-item-category text-capitalize text-color-1"
                                     href="{{ route('ad_category', ['category' => $category]) }}">
-                                    {{ $category->name }}
+                                    {{ __('ui.' . $category->name) }}
                                 </a>
                             </li>
                             @if (!$loop->last)
@@ -106,7 +106,7 @@
                             @if (App\Models\Ad::toBeRevisedCount() > 0)
                                 @if (Auth::user()->is_revisor)
                                     <span
-                                        class="position-absolute top-0 start-100 mt-1 translate-middle badge rounded-pill bg-4">
+                                        class="position-absolute top-0 start-100 mt-1 translate-middle badge rounded-pill bg-3 text-color-2">
                                         {{ App\Models\Ad::toBeRevisedCount() }}
                                     </span>
                                 @endif

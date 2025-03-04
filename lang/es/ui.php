@@ -4,10 +4,10 @@ return [
     'appName' => 'AdVibe',
     'headerImageAlt' => 'Encabezado de AdVibe',
     'welcomeUser' => 'Bienvenido ',
-    'startPublishing' => '¡comienza a publicar anuncios!',
+    'startPublishing' => 'comienza a publicar anuncios!',
     'insertAd' => 'Insertar anuncio',
     'welcomeGuest' => 'Bienvenido,',
-    'registerToPublish' => '¡regístrate para publicar anuncios!',
+    'registerToPublish' => 'regístrate para publicar anuncios!',
     'register' => 'Registrarse',
     'latestAds' => 'Últimos Anuncios',
     'noAdsPublished' => 'No hay anuncios publicados',
@@ -89,4 +89,10 @@ return [
     'Viaggi' => 'Viajes',
     'Animali' => 'Mascotas',
     'Altro' => 'Otros',
+    // File inserimento img
+    'preview' => 'Vista previa de la foto',
+    'choose_file' => 'Elegir archivo',
+    'success'=> '¡Operación completada con éxito!',
+    'rejectMessage' => 'Has rechazado el anuncio',
+    'successMessageRevisor' => 'Solicitud completada con éxito!',
 ];

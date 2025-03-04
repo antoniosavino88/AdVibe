@@ -5,8 +5,11 @@
         <div class="p-3">
             <h5 class="card-title text-center text-truncate text-title">{{ $ad->title }}</h5>
             <div class="d-flex justify-content-between align-items-center">
-                <p class="card-text"><a href="{{ route('ad_category', ['category' => $ad->category]) }} "
-                        class="btn btn-sm bg-1 border btn-category transition mt-3"> {{ $ad->category->name }}</a></p>
+                <p class="card-text">
+                    <a href="{{ route('ad_category', ['category' => $ad->category]) }}"
+                        class="btn btn-sm bg-1 border btn-category transition mt-3">
+                        {{ __('ui.' . $ad->category->name) }} </a>
+                    </p>
                 <p class="card-text fw-bold">€ {{ $ad->price }}</p>
             </div>
             <a href="{{ route('ad_show', compact('ad')) }}"
