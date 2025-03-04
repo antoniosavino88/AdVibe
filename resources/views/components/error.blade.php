@@ -7,7 +7,7 @@
                         <li class="ps-3">{{ $error }}</li>
                     @endforeach
                     <button type="button" class="btn-close position-absolute mt-3 me-3 top-0 end-0"
-                        data-bs-dismiss="alert" aria-label="Close"></button>
+                        data-bs-dismiss="alert" aria-label="Close" aria-label="{{ __('ui.close') }}"></button>
                 </ul>
             </div>
         </div>
