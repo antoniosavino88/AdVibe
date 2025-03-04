@@ -138,6 +138,9 @@ body {
     background-color: var(--color-secondary) !important;
     color: var(--color-quinary) !important;
 }
+.dropdown-item-language:hover {
+    color: var(--color-quinary) !important;
+}
 
 .border-custom {
     border-top-left-radius: 20px;
@@ -181,6 +184,13 @@ body {
     animation: vibrateWithPause 0.8s infinite;
     color: var(--color-tertiary);
     font-weight: bold;
+}
+
+.mt-custom{
+    margin-top: 11px !important;
+}
+.mt-custom2{
+    margin-top: 7px !important;
 }
 
 /* HOMEPAGE */
@@ -251,3 +261,11 @@ body {
 .border-preview-custom {
     border: 2px solid var(--color-tertiary);
 }
+
+/* FOOTER */
+
+.logo-footer{
+    max-width: 170px;
+    margin-bottom: 6px;
+}
+
