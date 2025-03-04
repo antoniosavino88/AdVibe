@@ -19,7 +19,7 @@ class InsertAd extends Component
 
     #[Validate('required|max:100')]
     public $title;
-    #[Validate('required|max:8 | numeric')]
+    #[Validate('required|max:8')]
     public $price;
     #[Validate('required')]
     public $description;

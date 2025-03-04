@@ -23,7 +23,7 @@
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
-                    <ul class="dropdown-menu bg-2 mt-2" id="dropdown-menu">
+                    <ul class="dropdown-menu bg-2 mt-custom" id="dropdown-menu">
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item dropdown-item-category text-capitalize text-color-1"
@@ -43,9 +43,9 @@
                 <li class="nav-item">
                     <form class="d-flex me-2" role="search" action="{{ route('ad_search') }}" method="GET">
                         <div class="input-group">
-                            <input type="search" name="query" class="form-control border-custom "
+                            <input type="search" name="query" class="form-control border-custom"
                                 placeholder="{{ __('ui.searchAd') }}" aria-label="search">
-                            <button type="submit" class="input-group-text btn btn-search border-custom2 transition"
+                            <button type="submit" class="input-group-text btn btn-search border-custom2 transition border-1 "
                                 id="basic-addon2">
                                 {{ __('ui.search') }}
                             </button>
@@ -68,7 +68,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false" id="languageDropdown" >
                         <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="32" height="32" class="me-2" />
                     </a>
-                    <ul class="dropdown-menu bg-2 mt-1" id="dropdown-language" aria-labelledby="languageDropdown">
+                    <ul class="dropdown-menu bg-2 mt-custom2" id="dropdown-language" aria-labelledby="languageDropdown">
                         @foreach ($languages as $lang => $name)
                             @if ($lang !== $currentLang)
                                 <!-- Evita di ripetere la lingua attuale -->
@@ -111,7 +111,7 @@
                                 @endif
                             @endif
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end border-0 bg-2 mt-2" id="dropdown-user">
+                        <ul class="dropdown-menu dropdown-menu-end border-0 bg-2 mt-custom" id="dropdown-user">
                             @if (Auth::user()->is_revisor)
                                 <li>
                                     <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'revisor.index' ? 'active' : '' }}
@@ -126,7 +126,7 @@
                                     href="{{ route('insert_ad') }}">{{ __('ui.insertAd') }}</a>
                             </li>
                             <li  class="d-flex justify-content-center ">
-                                <div class="btn btn-danger ms-1 p-0">
+                                <div class="btn btn-danger btn-sm p-0 w-100 mx-2 mt-2">
                                     <a class="dropdown-item text-color-1 logout-link transition" href="#"
                                         onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">
                                         {{ __('ui.logout') }}
