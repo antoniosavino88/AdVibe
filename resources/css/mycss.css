@@ -130,6 +130,9 @@ body {
     background-color: var(--color-secondary) !important;
     color: var(--color-quinary) !important;
 }
+.dropdown-item-language:hover {
+    color: var(--color-quinary) !important;
+}
 
 .border-custom {
     border-top-left-radius: 20px;

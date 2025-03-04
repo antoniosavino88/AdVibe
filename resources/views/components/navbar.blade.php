@@ -23,7 +23,7 @@
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
-                    <ul class="dropdown-menu bg-2" id="dropdown-menu">
+                    <ul class="dropdown-menu bg-2 mt-2" id="dropdown-menu">
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item dropdown-item-category text-capitalize text-color-1"
@@ -39,11 +39,11 @@
                 </li>
             </ul>
             <!-- Elementi a destra -->
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto d-flex align-items-center">
                 <li class="nav-item">
                     <form class="d-flex me-2" role="search" action="{{ route('ad_search') }}" method="GET">
                         <div class="input-group">
-                            <input type="search" name="query" class="form-control border-custom"
+                            <input type="search" name="query" class="form-control border-custom "
                                 placeholder="{{ __('ui.searchAd') }}" aria-label="search">
                             <button type="submit" class="input-group-text btn btn-search border-custom2 transition"
                                 id="basic-addon2">
@@ -64,12 +64,11 @@
                     ];
                 @endphp
                 <li class="dropdown">
-                    <button class="btn bg-2 dropdown-toggle d-flex align-items-center" type="button"
-                        id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="32"
-                            height="32" class="me-2" />
-                    </button>
-                    <ul class="dropdown-menu bg-2" aria-labelledby="languageDropdown">
+                    <a class="nav-link dropdown-toggle position-relative" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" id="languageDropdown" >
+                        <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="32" height="32" class="me-2" />
+                    </a>
+                    <ul class="dropdown-menu bg-2 mt-1" id="dropdown-language" aria-labelledby="languageDropdown">
                         @foreach ($languages as $lang => $name)
                             @if ($lang !== $currentLang)
                                 <!-- Evita di ripetere la lingua attuale -->
@@ -77,10 +76,10 @@
                                     <form action="{{ route('setLocale', $lang) }}" method="POST"
                                         class="d-flex align-items-center">
                                         @csrf
-                                        <button type="submit" class="dropdown-item d-flex align-items-center">
+                                        <button type="submit" class="dropdown-item d-flex align-items-center logout-link transition">
                                             <img src="{{ asset('vendor/blade-flags/language-' . $lang . '.svg') }}"
                                                 width="24" height="24" class="me-2" />
-                                            <span class="text-color-1 dropdown-item-category ">{{ $name }}</span>
+                                            <span class="text-color-1 dropdown-item-language transition">{{ $name }}</span>
                                         </button>
                                     </form>
                                 </li>
@@ -99,7 +98,7 @@
                     </li>
                 @endguest
                 @auth
-                    <li class="nav-item dropdown me-3">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle position-relative" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ __('ui.hello') }}, {{ ucfirst(Auth::user()->name) }}
@@ -112,7 +111,7 @@
                                 @endif
                             @endif
                         </a>
-                        <ul class="dropdown-menu border-0 bg-2">
+                        <ul class="dropdown-menu dropdown-menu-end border-0 bg-2 mt-2" id="dropdown-user">
                             @if (Auth::user()->is_revisor)
                                 <li>
                                     <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'revisor.index' ? 'active' : '' }}
@@ -126,7 +125,7 @@
                                 <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'insert_ad' ? 'active' : '' }}"
                                     href="{{ route('insert_ad') }}">{{ __('ui.insertAd') }}</a>
                             </li>
-                            <li>
+                            <li  class="d-flex justify-content-center ">
                                 <div class="btn btn-danger ms-1 p-0">
                                     <a class="dropdown-item text-color-1 logout-link transition" href="#"
                                         onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">

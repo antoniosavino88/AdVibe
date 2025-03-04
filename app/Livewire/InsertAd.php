@@ -17,16 +17,14 @@ class InsertAd extends Component
     public $images = [];
     public $temporary_images;
 
-    #[Validate('required', message: 'Devi riempire il campo "Titolo"!')]
-    #[Validate('min:5', message: 'Il titolo dell\'annuncio deve avere minimo 5 caratteri!')]
+    #[Validate('required|max:100')]
     public $title;
-    #[Validate('required', message: 'Devi riempire il campo "Prezzo"!')]
+    #[Validate('required|max:8 | numeric')]
     public $price;
-    #[Validate('required', message: 'Devi riempire il campo "Descrizione"!')]
+    #[Validate('required')]
     public $description;
-    #[Validate('required', message: 'Devi selezionare una categoria!')]
+    #[Validate('required')]
     public $category_id;
-    // public $users;
 
     public function adCreate()
     {
