@@ -41,14 +41,14 @@
  --}}
 
 
- <x-layout>
+<x-layout>
     @push('title')
         {{ __('ui.appName') }} - {{ __('ui.adsTitle') }}
     @endpush
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center p-5 text-title">{{ __('ui.allAds') }}</h1>
+                <h1 class="text-center p-5 text-title display-4 fw-semibold">{{ __('ui.allAds') }}</h1>
             </div>
         </div>
         <div class="row">

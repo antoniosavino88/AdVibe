@@ -25,7 +25,8 @@
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-                            <h3 class="text-center">{{ __('ui.welcomeUser') }}<span class="text-color-5">{{ ucfirst(auth()->user()->name) }}</span>,
+                            <h3 class="text-center">{{ __('ui.welcomeUser') }}<span
+                                    class="text-color-5">{{ ucfirst(auth()->user()->name) }}</span>,
                                 {{ __('ui.startPublishing') }}</h3>
                             {{-- <h4>Inizia subito a pubblicare i tuoi annunci!</h4> --}}
                             <div class="container">
@@ -64,7 +65,7 @@
 
     <div class="container">
         <div class="row justify-content-center pb-5">
-            <h2 class="text-center p-5">
+            <h2 class="text-center p-5 text-title fw-semibold">
                 {{ __('ui.latestAds') }}
             </h2>
             <div class="row justify-content-evenly">
