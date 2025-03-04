@@ -36,8 +36,8 @@
                             </div>
                         @endfor --}}
                         @foreach ($ad_to_check->images as $key => $image)
-                            <div class="col-6 col-md-4 mb-4">
-                                <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow"
+                            <div class="col-12 justify-content-center d-flex mb-4">
+                                <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded shadow"
                                     alt="Immagine {{ $key + 1 }} dell'articolo '{{ $ad_to_check->title }}'">
                             </div>
                         @endforeach
