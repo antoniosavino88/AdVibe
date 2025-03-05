@@ -10,8 +10,8 @@
         </div>
     @endif
 
-    <div class="container header-custom">
-        <div class="row justify-content-center">
+    <div class="container-fluid header-custom bg-image vh-100 m-0">
+        <div class="row d-flex flex-column justify-content-center h-100 align-items-center">
             @if (session()->has('message'))
                 <div class="alert alert-success text-center shadow rounded w-50">
                     {{ __('ui.successMessageRevisor') }}

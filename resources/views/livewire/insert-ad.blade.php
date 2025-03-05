@@ -15,7 +15,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">{{ __('ui.price') }}</label>
+                        <label class="form-label">{{ __('ui.price') }} €</label>
                         <input type="number" step="0.01" class="form-control" wire:model.blur='price'>
                         @error('price')
                             <div class="text-danger fst-italic"> {{ $message }} </div>

@@ -194,10 +194,26 @@ body {
 }
 
 /* HOMEPAGE */
-.header-custom {
-    margin-top: 35vh;
-    margin-bottom: 20vh;
+
+/* .bg-image {
+    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/Carrello_spesa.png');
+
+    background-size: cover;
+} */
+.bg-image {
+    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/carrello_home_2.jpeg');
+    background-size: cover;
 }
+/* .bg-image {
+    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/carrello_home_3.jpeg');
+    background-size: cover;
+} */
+
+/* .bg-image {
+    background: linear-gradient(rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1)), url('/storage/app/public/media/carrello_home_4.jpeg');
+    background-size: cover;
+} */
+
 
 .img-header {
     width: 30vw;

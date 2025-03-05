@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -28,7 +29,6 @@ class InsertAd extends Component
 
     public function adCreate()
     {
-
         $this->validate();
 
         $this->ad = Ad::create([
@@ -44,9 +44,7 @@ class InsertAd extends Component
                 $newFileName = "ads/{$this->ad->id}";
                 $newImage = $this->ad->images()->create(['path' => $image->store($newFileName, 'public')]);
                 dispatch(new ResizeImage($newImage->path, 300, 300));
-                // // $ad->images()->create([
-                // //     'path' => $image->store('images', 'public')
-                // ]);
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
             }
             File::deleteDirectory(storage_path('app/livewire-tmp'));
         }
