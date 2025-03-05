@@ -13,8 +13,10 @@ php artisan scout:status
 1- composer require outhebox/blade-flags
 2- php artisan vendor:publish --tag=blade-flags --force
 
-<!-- PASSAGGI PER GOOGLE API USER STORY 7 -->
-- creare file google_credential.json nella root
+<!-- PASSAGGI PER GOOGLE API USER STORY 7  DA PAG. 89-->
+- andare nella dashboard nella prima lezione del progetto finale e scaricare il file json google credential
+- inserire il file nella root del progetto 
+- rinominare il file il google_credential.json
 
 - PER WINDOWS - per evitare l’errore certificato SSL:
 recarsi al sito "curl - Extract CA Certs from Mozilla" e scaricare il primo file:
