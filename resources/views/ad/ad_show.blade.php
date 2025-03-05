@@ -65,18 +65,19 @@
                     <img src="https://picsum.photos/400" alt="Nessuna foto inserita dall'utente">
                 @endif
             </div>
-        </div>
-        <div class="col-12 col-md-6 height-custom text-start d-flex flex-column justify-content-between">
-            <div class="row">
-                <h2 class="display-5 text-title"><span class="text-title"></span> {{ $ad->title }}</h2>
-                <h4>€ {{ $ad->price }}</h4>
+            <div class="col-12 col-md-6 height-custom text-start d-flex flex-column justify-content-center">
+                <div class="row">
+                    <h2 class="display-5 text-title"><span class="text-title"></span> {{ $ad->title }}</h2>
+                    <h4>€ {{ $ad->price }}</h4>
+                </div>
+                <div class="row ">
+                    <h5 class="text-muted">{{ __('ui.description') }}:</h5>
+                    <p class="text-start">{{ $ad->description }}</p>
+                </div>
             </div>
-            <div class="row ">
-                <h5 class="text-muted">{{ __('ui.description') }}:</h5>
-                <p class="text-start">{{ $ad->description }}</p>
-            </div>
         </div>
-    </div>
-    </div>
+
+    {{-- </div> --}}
+    {{-- </div> --}}
     </div>
 </x-layout>
