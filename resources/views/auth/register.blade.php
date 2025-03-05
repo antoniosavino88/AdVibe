@@ -3,7 +3,7 @@
         {{ __('ui.appName') }} - {{ __('ui.register') }}
     @endpush
     <div class="container p-5">
-        <h1 class="text-center p-5 text-title">{{ __('ui.register') }}</h1>
+        <h1 class="text-center p-5 text-title display-4 fw-semibold">{{ __('ui.register') }}</h1>
         <div class="row justify-content-center">
             <x-error />
             <div class="col-6">
@@ -25,7 +25,8 @@
                         <label class="form-label">{{ __('ui.confirmPassword') }}</label>
                         <input type="password" class="form-control" name="password_confirmation">
                     </div>
-                    <button type="submit" class="btn btn-custom transition fs-5 btn-sm my-3 px-3 py-0">{{ __('ui.register') }}</button>
+                    <button type="submit"
+                        class="btn btn-custom transition fs-5 btn-sm my-3 px-3 py-0">{{ __('ui.register') }}</button>
                 </form>
             </div>
         </div>

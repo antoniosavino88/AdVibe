@@ -1,7 +1,7 @@
 <div>
     {{-- @dd($this->categories) --}}
     <div class="container my-5">
-        <h2 class="text-center p-5 text-title">{{ __('ui.insertAd') }}</h2>
+        <h1 class="text-center p-5 text-title display-4 fw-semibold">{{ __('ui.insertAd') }}</h1>
         <div class="row justify-content-center">
             <x-success />
             <div class="col-12 col-md-6">
@@ -31,6 +31,7 @@
                     <div class="form-group mb-3">
                         <label for="categories">{{ __('ui.selectCategory') }}</label>
                         <select wire:model="category_id" class="form-control">
+                            <option value="1">---</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach

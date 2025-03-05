@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
-                <h1 class="display-2">{{ __('ui.adsInCategory') }} <span
-                        class="fst-italic fw-bold">{{ $category->name }}</span></h1>
+                <h1 class="display-4 text-title">{{ __('ui.adsInCategory') }} <span
+                        class="fw-bold">{{ __('ui.' . $category->name) }}</span></h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">

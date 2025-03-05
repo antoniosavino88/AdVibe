@@ -11,7 +11,8 @@
     --color-tertiary: #50c4c9;
     --color-quaternary: #bd89ad;
     --color-quinary: #f4695d;
-    --color-sixth: #f5b83d;
+    /* --color-sixth: #f5b83d; */
+    --color-sixth: #9cdced;
 }
 
 /* FONT */
@@ -41,6 +42,9 @@ body {
 .bg-2 {
     background-color: var(--color-secondary);
 }
+.bg-2-op {
+    background-color: var(--color-secondary-op);
+}
 .bg-3 {
     background-color: var(--color-tertiary);
 }
@@ -50,8 +54,12 @@ body {
 .bg-5 {
     background-color: var(--color-quinary);
 }
-.bg-6 {
+/* .bg-6 {
     background-color: #f5b83d;
+} */
+
+.bg-6 {
+    background-color: var(--color-sixth);
 }
 
 /* COLORI TESTI */
@@ -130,6 +138,9 @@ body {
     background-color: var(--color-secondary) !important;
     color: var(--color-quinary) !important;
 }
+.dropdown-item-language:hover {
+    color: var(--color-quinary) !important;
+}
 
 .border-custom {
     border-top-left-radius: 20px;
@@ -175,6 +186,13 @@ body {
     font-weight: bold;
 }
 
+.mt-custom{
+    margin-top: 11px !important;
+}
+.mt-custom2{
+    margin-top: 7px !important;
+}
+
 /* HOMEPAGE */
 .header-custom {
     margin-top: 35vh;
@@ -210,23 +228,25 @@ body {
 
 /* revisore */
 .btn-custom-accept {
-    color: var(--color-secondary);
-    border-color: var(--color-quaternary);
+    color: var(--color-primary);
+    background-color: var(--color-tertiary);
 }
 
 .btn-custom-accept:hover {
-    background-color: var(--color-quaternary);
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    border-color: var(--color-tertiary);
 }
 
 .btn-custom-reject {
-    color: var(--color-secondary);
-    border-color: var(--color-quinary);
+    color: var(--color-primary);
+    background-color: var(--color-quinary);
 }
 
 .btn-custom-reject:hover {
-    background-color: var(--color-quinary);
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-quinary);
+    border-color: var(--color-quinary);
 }
 
 /* Insert Ad */
@@ -241,3 +261,11 @@ body {
 .border-preview-custom {
     border: 2px solid var(--color-tertiary);
 }
+
+/* FOOTER */
+
+.logo-footer{
+    max-width: 170px;
+    margin-bottom: 6px;
+}
+

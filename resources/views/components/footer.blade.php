@@ -11,34 +11,35 @@
                 <p>
                     {{ __('ui.footerDescription') }}
                 </p>
-                <!--Grid row-->
-                @auth
-                    @if (!Auth::user()->is_revisor)
-                        <div class="col-12 d-flex justify-content-start">
-                            <h5 class="align-content-center m-0 fw-bold">{{ __('ui.becomeRevisorQuestion') }}</h5>
-                            <a href="{{ route('become.revisor') }}" class="btn btn-custom transition m-5 fw-bold fs-5">{{ __('ui.clickHere') }}</a>
-                        </div>
-                    @endif
-                @endauth
             </div>
             <!--Grid column-->
-
+            
             <!--Grid column-->
             <div class="col-lg-5 col-md-12 mb-4 mb-md-0 p-3 text-end">
-                <h5 class="text-uppercase py-2">{{ __('ui.teamName') }}</h5>
-
+                <h5 class="py-2 fw-bold">DevAlchemy</h5>
+                
                 <p>
                     {{ __('ui.teamDescription') }}
                 </p>
             </div>
         </div>
-
+        
     </div>
     <!-- Grid container -->
-
+    
+    @auth
+    @if (!Auth::user()->is_revisor)
+    <div class="row justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center flex-column align-items-center">
+            <h5 class="align-content-center m-0 fw-bold fs-3">{{ __('ui.becomeRevisorQuestion') }} <span>                    <img class="logo-footer" src="{{ asset('./media/logo.png') }}" alt="{{ __('ui.logoAlt') }}"></span>{{__('ui.footerRevisor')}}</h5>
+            <a href="{{ route('become.revisor') }}" class="btn btn-custom transition mb-5 mt-3 fw-bold w-25">{{ __('ui.clickHere') }}</a>
+        </div>
+    </div>
+    @endif
+    @endauth
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-
+    <div class="text-center p-3 mt-5 border-top mx-5" style="background-color: rgba(0, 0, 0, 0.05);">
+        
         <p class="fs-none"> © 2025 {{ __('ui.copyright') }}: DevAlchemy</p>
     </div>
     <!-- Copyright -->
