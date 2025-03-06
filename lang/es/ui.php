@@ -97,4 +97,6 @@ return [
     'rejectMessage' => 'Has rechazado el anuncio',
     'successMessageRevisor' => 'Solicitud completada con éxito!',
     'category' => 'Categoría',
+    'file_load' => 'Cargar hasta 5 archivos',
+
 ];

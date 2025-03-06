@@ -52,9 +52,6 @@
                         </div>
                     </form>
                 </li>
-                {{-- <x-locale lang="it"/>
-               <x-locale lang="en"/>
-               <x-locale lang="es"/> --}}
                 @php
                     $currentLang = session('locale', 'it'); // Lingua corrente (default: IT)
                     $languages = [
@@ -65,7 +62,7 @@
                 @endphp
                 <li class="dropdown">
                     <a class="nav-link dropdown-toggle position-relative" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" id="languageDropdown" >
+                            data-bs-toggle="dropdown" aria-expanded="false" id="languageDropdown">
                         <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="32" height="32" class="me-2" />
                     </a>
                     <ul class="dropdown-menu bg-2 mt-custom2" id="dropdown-language" aria-labelledby="languageDropdown">

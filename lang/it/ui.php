@@ -96,4 +96,5 @@ return [
     'rejectMessage' => 'Hai rifiutato l\'annuncio',
     'successMessageRevisor' => 'Richiesta avvenuta con successo!',
     'category' => 'Categoria',
+    'file_load' => 'Carica fino a 5 file',
 ];

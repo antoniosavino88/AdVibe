@@ -285,3 +285,24 @@ body {
     margin-bottom: 6px;
 }
 
+/* Modale */
+.modal-content {
+    background-color: var(--color-primary); /* Sfondo rosso chiaro */
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: var(--color-secondary) !important;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.modal-footer .btn-danger {
+    background-color: var(--color-secondary);
+}
+
+.btn-close {
+    filter: invert(1); /* Cambia il colore della "X" */
+}
+
+

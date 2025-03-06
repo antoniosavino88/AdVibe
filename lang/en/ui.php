@@ -96,4 +96,6 @@ return [
     'rejectMessage' => 'You have rejected the ad',
     'successMessageRevisor' => 'Request completed successfully!',
     'category' => 'Category',
+    'file_load' => 'Load up to 5 files',
+
 ];

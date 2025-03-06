@@ -16,7 +16,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">{{ __('ui.price') }} €</label>
-                        <input type="number" step="0.01" class="form-control" wire:model.blur='price'>
+                        <input type="number" step="0.01" class="form-control" wire:model.lazy="price" wire:blur="formatPrice">
                         @error('price')
                             <div class="text-danger fst-italic"> {{ $message }} </div>
                         @enderror
@@ -43,6 +43,7 @@
 
                     {{-- Inserimento immagini --}}
                     <div class="mb-3">
+                        <p class="text-muted mb-0">{{ __('ui.file_load') }}</p>
                         <input type="file" wire:model.live="temporary_images" multiple
                             class="form-control shadow @error('temporary_images.*') is-invalid @enderror"
                             placeholder="Img" />

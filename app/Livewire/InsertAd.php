@@ -29,6 +29,19 @@ class InsertAd extends Component
     #[Validate('required')]
     public $category_id;
 
+public function formatPrice()
+    {
+        $numericValue = str_replace(',', '.', $this->price);
+
+        if (is_numeric($numericValue)) {
+            $this->price = number_format((float) $numericValue, 2, '.', '');
+        } else {
+            $this->price = 0.00;
+        }
+
+        $this->validateOnly('price');
+    }
+
     public function adCreate()
     {
         $this->validate();
