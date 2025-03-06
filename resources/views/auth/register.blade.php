@@ -2,12 +2,12 @@
     @push('title')
         {{ __('ui.appName') }} - {{ __('ui.register') }}
     @endpush
-    <div class="container p-5">
+    <div class="container-fluid p-5 bg-page-form">
         <h1 class="text-center p-5 text-title display-4 fw-semibold">{{ __('ui.register') }}</h1>
         <div class="row justify-content-center">
             <x-error />
-            <div class="col-6">
-                <form method="POST" class="shadow rounded p-5" action="{{ route('register') }}">
+            <div class="col-12 col-md-6">
+                <form method="POST" class="shadow rounded-4 p-5 bg-form" action="{{ route('register') }}">
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">{{ __('ui.username') }}</label>
