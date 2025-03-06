@@ -95,7 +95,7 @@ return [
     'mac_address' => ':attribute deve essere un indirizzo MAC valido.',
     'max' => [
         'array' => ':attribute non può contenere più di :max elementi.',
-        'file' => ':attribute non può essere più grande di :max kilobytes.',
+        'file' => 'Il file non può essere più grande di :max kilobytes.',
         'numeric' => ':attribute non può essere superiore a :max.',
         'string' => ':attribute non può essere più lungo di :max caratteri.',
     ],
@@ -190,6 +190,6 @@ return [
     |
     */
 
-    'attributes' => ['title'=>'Il titolo','description'=>'La descrizione', 'price'=>'Il prezzo', 'category_id'=>'La categoria', 'name'=>'Username'],
+    'attributes' => ['title'=>'Il titolo','description'=>'La descrizione', 'price'=>'Il prezzo', 'category_id'=>'La categoria', 'name'=>'Username', ],
 
 ];
