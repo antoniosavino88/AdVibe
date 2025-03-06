@@ -234,9 +234,14 @@ body {
 .card-container {
     width: 18rem;
 }
+
 .img-card {
     width: 100%;
     border-radius: 7px 7px 0px 0px;
+    height: 280px;
+    image-rendering: optimizeQuality;
+    object-fit: contain;
+    padding: 5px;
 }
 
 .btn-category:hover {
@@ -286,6 +291,17 @@ body {
     margin-bottom: 6px;
 }
 
+
+.btn-footer{
+    background-color:var(--color-quinary);
+    color:var(--color-primary);
+
+}
+.btn-footer:hover{
+    background-color:var(--color-primary);
+    color:var(--color-quinary);
+}
+
 /* Modale */
 .modal-content {
     background-color: var(--color-primary); /* Sfondo rosso chiaro */
@@ -307,15 +323,26 @@ body {
 }
 
 
-.btn-footer{
-    background-color:var(--color-quinary);
-    color:var(--color-primary);
+/* Modale */
+.modal-content {
+    background-color: var(--color-primary); /* Sfondo rosso chiaro */
+    border-radius: 10px;
+}
 
+.modal-header {
+    background-color: var(--color-secondary) !important;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
 }
-.btn-footer:hover{
-    background-color:var(--color-primary);
-    color:var(--color-quinary);
+
+.modal-footer .btn-danger {
+    background-color: var(--color-secondary);
 }
+
+.btn-close {
+    filter: invert(1); /* Cambia il colore della "X" */
+}
+
 
 
 /* Form di registrazione */
@@ -333,3 +360,5 @@ body {
 .bg-form{
     background: rgb(248, 248, 248, 0.8);
 }
+
+

@@ -97,4 +97,5 @@ return [
     'successMessageRevisor' => 'Richiesta avvenuta con successo!',
     'category' => 'Categoria',
     'file_load' => 'Carica fino a 5 file',
+    'back' => 'Indietro',
 ];

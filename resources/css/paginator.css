@@ -1,0 +1,349 @@
+:root {
+    /* --color-primary: #001829;
+    --color-secondary: #EBE4E3;
+    --color-tertiary: #F5B83D;
+    --color-quaternary: #227C9D;
+    --color-quinary: #D62828; */
+
+    --color-primary: #f8f8f8;
+    --color-secondary: #001829;
+    --color-secondary-op: #0018299e;
+    --color-tertiary: #50c4c9;
+    --color-quaternary: #bd89ad;
+    --color-quinary: #f4695d;
+    /* --color-sixth: #f5b83d; */
+    --color-sixth: #9cdced;
+}
+
+/* FONT */
+:root {
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Karla", sans-serif;
+}
+
+/* FONT APPLICATI */
+* {
+    font-family: var(--font-secondary);
+}
+.text-title {
+    font-family: var(--font-primary);
+}
+
+body {
+    margin-top: 3rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    /* overflow-x: hidden; */
+}
+
+/* COLORI BACKGROUND */
+.bg-1 {
+    background-color: var(--color-primary);
+}
+.bg-2 {
+    background-color: var(--color-secondary);
+}
+.bg-2-op {
+    background-color: var(--color-secondary-op);
+}
+.bg-3 {
+    background-color: var(--color-tertiary);
+}
+.bg-4 {
+    background-color: var(--color-quaternary);
+}
+.bg-5 {
+    background-color: var(--color-quinary);
+}
+/* .bg-6 {
+    background-color: #f5b83d;
+} */
+
+.bg-6 {
+    background-color: var(--color-sixth);
+}
+
+/* COLORI TESTI */
+.text-color-1 {
+    color: var(--color-primary);
+}
+.text-color-2 {
+    color: var(--color-secondary);
+}
+.text-color-3 {
+    color: var(--color-tertiary);
+}
+.text-color-4 {
+    color: var(--color-quaternary);
+}
+.text-color-5 {
+    color: var(--color-quinary);
+}
+
+
+/* Stile per il contenitore della paginazione */
+/* .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+} */
+/*
+/* Stile per ogni elemento della paginazione */
+/* .pagination .page-item .page-link {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    padding: 6px 13px;
+    margin: 0 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+} */
+
+/* Stile quando si passa sopra */
+/* .pagination .page-item .page-link:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+} */
+
+/* Stile per l'elemento attivo */
+/* .pagination .page-item.active .page-link {
+    background-color: var(--color-quinary);
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+} */
+
+/* Disabilitato */
+/* .pagination .page-item.disabled .page-link {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    cursor: not-allowed;
+}  */
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* Contenitore della paginazione */
+/* .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 8px;
+} */
+
+/* Stile per ogni elemento della paginazione */
+/* .pagination .page-item .page-link {
+    color: #007bff;
+    background-color: transparent;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} */
+
+/* Effetto al passaggio del mouse */
+/* .pagination .page-item .page-link:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.1);
+} */
+
+/* Pagina attiva */
+/* .pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.4);
+    transform: scale(1.1);
+} */
+
+/* Disabilitato */
+/* .pagination .page-item.disabled .page-link {
+    color: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+} */
+
+/* Aggiunta di un'animazione */
+/* .pagination .page-item {
+    animation: fadeIn 0.5s ease-in-out;
+} */
+
+/* @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ */
+
+ /* ---------------------------------------------------------------------------------------------------------- */
+
+ /* Contenitore della paginazione */
+/* .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 10px;
+} */
+
+/* Stile per ogni elemento della paginazione */
+/* .pagination .page-item .page-link {
+    color: var(--color-secondary);
+    background: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+} */
+
+/* Effetto hover */
+/* .pagination .page-item .page-link:hover {
+    background: var(--color-quinary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+} */
+
+/* Pagina attiva */
+/* .pagination .page-item.active .page-link {
+    background: var(--color-sixth);
+    color: var(--color-secondary);
+    border-color: rgba(0, 123, 255, 0.8);
+    box-shadow: 0 8px 12px rgba(0, 123, 255, 0.3);
+} */
+
+/* Disabilitato */
+/* .pagination .page-item.disabled .page-link {
+    color: var(--color-tertiary);
+    border-color: var(--color-quaternary);
+    background-color: var(--color-primary);
+    box-shadow: none;
+    cursor: not-allowed;
+} */
+
+/* Aggiunta di una leggera animazione */
+/* .pagination .page-item {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+
+/* Contenitore del paginator con effetto di entrata */
+.animated-paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animazione di fade in per il contenitore del paginator */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Personalizzazione dei pulsanti di paginazione con animazione di zoom */
+.animated-paginator .pagination {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Animazione per ogni elemento del paginator */
+.animated-paginator .pagination .page-item {
+    margin: 0 5px;
+    transform: scale(0.8);
+    animation: zoomIn 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Stile per i link di paginazione con effetto di transizione fluida */
+.animated-paginator .pagination .page-link {
+    padding: 5px 12px;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effetto di hover (spostamento e cambiamento di colore) */
+.animated-paginator .pagination .page-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Effetto di pulsazione per il link attivo */
+.animated-paginator .pagination .active .page-link {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    animation: pulse 1s infinite;
+}
+
+/* Animazione di pulsazione per il link attivo */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: #0056b3;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #003d7a;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #0056b3;
+    }
+}
+
+/* Effetto per i link disabilitati */
+.animated-paginator .pagination .disabled .page-link {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Stile per i numeri di pagina in focus (quando cliccati) */
+.animated-paginator .pagination .page-item:focus-within .page-link {
+    outline: 2px solid #ffcc00;
+    outline-offset: 2px;
+}

@@ -76,7 +76,9 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-8 col-md-2">
+            <a href="{{ url()->previous() }}" class="btn btn-custom transition mb-5 mt-3 fw-bold"><i class="fa-solid fa-arrow-left"></i><- {{ __('ui.back') }}</a>
+        </div>
     {{-- </div> --}}
     {{-- </div> --}}
     </div>

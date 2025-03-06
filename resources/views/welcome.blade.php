@@ -70,7 +70,7 @@
             </h2>
             <div class="row justify-content-evenly">
                 @forelse ($ads as $ad)
-                    <div class="col-12 col-md-3 d-flex justify-content-evenly">
+                    <div class="col-12 col-md-3 d-flex justify-content-evenly mb-5">
                         <x-ad_card :ad="$ad" />
                     </div>
                 @empty

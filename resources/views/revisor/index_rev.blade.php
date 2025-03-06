@@ -146,7 +146,7 @@
                                     <div class="modal-body text-center">
                                         Sei sicuro di voler rifiutare questo annuncio?
                                     </div>
-                                    <div class="modal-footer justify-content-evenly">
+                                    <div class="modal-footer justify-content-end">
                                         <button type="button" class="btn mb-3 fw-bold btn-custom-accept btn-sm"
                                             data-bs-dismiss="modal">Annulla</button>
                                         <!-- Form di conferma -->

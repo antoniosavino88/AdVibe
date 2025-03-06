@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <x-error />
             <div class="col-12 col-md-6 py-5">
-                <form method="POST" action="{{ route('login') }}" class="shadow rounded-4 p-5 bg-form">
+                <form method="POST" action="{{ route('login') }}" class="shadow rounded-4 p-5 bg-form mb-5">
                     @csrf
                     <div class="py-3">
                         <label class="form-label">{{ __('ui.email') }}</label>
