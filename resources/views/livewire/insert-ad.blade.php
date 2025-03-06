@@ -1,12 +1,12 @@
 <div>
     {{-- @dd($this->categories) --}}
-    <div class="container my-5">
+    <div class="container-fluid p-5 bg-page-form">
         <h1 class="text-center p-5 text-title display-4 fw-semibold">{{ __('ui.insertAd') }}</h1>
         <div class="row justify-content-center">
             <x-success />
             <div class="col-12 col-md-6">
                 {{-- <x-error /> --}}
-                <form wire:submit='adCreate' class="shadow rounded p-5">
+                <form wire:submit='adCreate' class="shadow rounded-4 p-5 bg-form">
                     <div class="mb-3">
                         <label class="form-label">{{ __('ui.title') }}</label>
                         <input type="text" class="form-control" wire:model.blur='title'>

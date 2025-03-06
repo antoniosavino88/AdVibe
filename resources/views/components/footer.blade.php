@@ -29,10 +29,13 @@
     
     @auth
     @if (!Auth::user()->is_revisor)
-    <div class="row justify-content-center">
+    <div class="row justify-content-center w-100">
         <div class="col-md-6 d-flex justify-content-center flex-column align-items-center">
             <h5 class="align-content-center m-0 fw-bold fs-3">{{ __('ui.becomeRevisorQuestion') }} <span>                    <img class="logo-footer" src="{{ asset('./media/logo.png') }}" alt="{{ __('ui.logoAlt') }}"></span>{{__('ui.footerRevisor')}}</h5>
-            <a href="{{ route('become.revisor') }}" class="btn btn-custom transition mb-5 mt-3 fw-bold w-25">{{ __('ui.clickHere') }}</a>
+
+            {{-- bottone da scegliere --}}
+            {{-- <a href="{{ route('become.revisor') }}" class="btn btn-custom transition mb-5 mt-3 fw-bold w-25">{{ __('ui.clickHere') }}</a> --}}
+            <a href="{{ route('become.revisor') }}" class="btn btn-footer transition mb-5 mt-3 fw-bold w-25">{{ __('ui.clickHere') }}</a>
         </div>
     </div>
     @endif

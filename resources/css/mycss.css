@@ -33,6 +33,7 @@ body {
     margin-top: 3rem;
     background-color: var(--color-primary);
     color: var(--color-secondary);
+    /* overflow-x: hidden; */
 }
 
 /* COLORI BACKGROUND */
@@ -306,3 +307,29 @@ body {
 }
 
 
+.btn-footer{
+    background-color:var(--color-quinary);
+    color:var(--color-primary);
+
+}
+.btn-footer:hover{
+    background-color:var(--color-primary);
+    color:var(--color-quinary);
+}
+
+
+/* Form di registrazione */
+
+.bg-page-form{
+    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)),
+
+    url('/storage/app/public/media/sfondo1.webp');
+    /* url('/storage/app/public/media/sfondo2.webp'); */
+    /* url('/storage/app/public/media/sfondo3.webp'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.bg-form{
+    background: rgb(248, 248, 248, 0.8);
+}

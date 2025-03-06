@@ -2,12 +2,12 @@
     @push('title')
         {{ __('ui.appName') }} - {{ __('ui.login') }}
     @endpush
-    <div class="container p-5">
+    <div class="container-fluid p-5 bg-page-form">
         <h1 class="text-center p-5 display-4 fw-semibold text-title">{{ __('ui.login') }}</h1>
         <div class="row justify-content-center">
             <x-error />
-            <div class="col-6 py-5">
-                <form method="POST" action="{{ route('login') }}" class="shadow rounded p-5">
+            <div class="col-12 col-md-6 py-5">
+                <form method="POST" action="{{ route('login') }}" class="shadow rounded-4 p-5 bg-form">
                     @csrf
                     <div class="py-3">
                         <label class="form-label">{{ __('ui.email') }}</label>
