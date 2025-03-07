@@ -202,8 +202,9 @@ body {
     background-size: cover;
 } */
 .bg-image {
-    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/carrello_home_2.jpeg');
+    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248)), url('/storage/app/public/media/bg-home.png');
     background-size: cover;
+    background-position: bottom;
 }
 /* .bg-image {
     background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/carrello_home_3.jpeg');
@@ -294,7 +295,7 @@ body {
     position: sticky;
     top: 100px;
     max-height: calc(100vh - 120px); /* Evita che il contenuto sfori */
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 
@@ -442,5 +443,18 @@ body {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* DETTAGLIO */
+
+.img-show {
+    position: sticky;
+    top: 100px;
+}
+
+.bi-arrow-left-circle:hover {
+    color: var(--color-tertiary);
+    transform: translateX(-5px);
+    position: absolute;
 }
 
