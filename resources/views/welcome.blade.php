@@ -13,8 +13,11 @@
     <div class="container-fluid header-custom bg-image vh-100 m-0">
         <div class="row d-flex flex-column justify-content-center h-100 align-items-center">
             @if (session()->has('message'))
-                <div class="alert alert-success text-center shadow rounded w-50">
+                <div
+                    class="alert alert-success ps-3 list-unstyled d-flex justify-content-between w-50 position-relative">
                     {{ __('ui.successMessageRevisor') }}
+                    <button type="button" class="btn-close position-absolute mt-3 me-3 top-0 end-0"
+                        data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
             <div class="col-md-12 d-flex justify-content-center">

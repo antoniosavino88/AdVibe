@@ -45,7 +45,8 @@
                         <div class="input-group">
                             <input type="search" name="query" class="form-control border-custom"
                                 placeholder="{{ __('ui.searchAd') }}" aria-label="search">
-                            <button type="submit" class="input-group-text btn btn-search border-custom2 transition border-1 "
+                            <button type="submit"
+                                class="input-group-text btn btn-search border-custom2 transition border-1 "
                                 id="basic-addon2">
                                 {{ __('ui.search') }}
                             </button>
@@ -62,10 +63,11 @@
                 @endphp
                 <li class="dropdown">
                     <a class="nav-link dropdown-toggle position-relative" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" id="languageDropdown">
-                        <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="32" height="32" class="me-2" />
+                        data-bs-toggle="dropdown" aria-expanded="false" id="languageDropdown">
+                        <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="25"
+                            height="25" class="me-2" />
                     </a>
-                    <ul class="dropdown-menu bg-2 mt-custom2" id="dropdown-language" aria-labelledby="languageDropdown">
+                    <ul class="dropdown-menu bg-2 m-custom2" id="dropdown-language" aria-labelledby="languageDropdown">
                         @foreach ($languages as $lang => $name)
                             @if ($lang !== $currentLang)
                                 <!-- Evita di ripetere la lingua attuale -->
@@ -73,10 +75,12 @@
                                     <form action="{{ route('setLocale', $lang) }}" method="POST"
                                         class="d-flex align-items-center">
                                         @csrf
-                                        <button type="submit" class="dropdown-item d-flex align-items-center logout-link transition">
+                                        <button type="submit"
+                                            class="dropdown-item d-flex align-items-center logout-link transition">
                                             <img src="{{ asset('vendor/blade-flags/language-' . $lang . '.svg') }}"
                                                 width="24" height="24" class="me-2" />
-                                            <span class="text-color-1 dropdown-item-language transition">{{ $name }}</span>
+                                            <span
+                                                class="text-color-1 dropdown-item-language transition">{{ $name }}</span>
                                         </button>
                                     </form>
                                 </li>
@@ -122,7 +126,7 @@
                                 <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'insert_ad' ? 'active' : '' }}"
                                     href="{{ route('insert_ad') }}">{{ __('ui.insertAd') }}</a>
                             </li>
-                            <li  class="d-flex justify-content-center ">
+                            <li class="d-flex justify-content-center ">
                                 <div class="btn btn-danger btn-sm p-0 w-100 mx-2 mt-2">
                                     <a class="dropdown-item text-color-1 logout-link transition" href="#"
                                         onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">

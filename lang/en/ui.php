@@ -98,5 +98,8 @@ return [
     'category' => 'Category',
     'file_load' => 'Load up to 5 files',
     'back' => 'Back',
-
+    // Dettaglio annuncio
+    'seller' => 'Seller',
+    'creationDate' => 'Created at',
+    'contactSeller' => 'Contact seller',
 ];

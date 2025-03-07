@@ -8,6 +8,7 @@
     --color-primary: #f8f8f8;
     --color-secondary: #001829;
     --color-secondary-op: #0018299e;
+    --color-secondary-op2: #00182907;
     --color-tertiary: #50c4c9;
     --color-quaternary: #bd89ad;
     --color-quinary: #f4695d;
@@ -187,11 +188,12 @@ body {
     font-weight: bold;
 }
 
-.mt-custom{
+.mt-custom {
     margin-top: 11px !important;
 }
-.mt-custom2{
+.m-custom2 {
     margin-top: 7px !important;
+    left: -8px !important;
 }
 
 /* HOMEPAGE */
@@ -202,7 +204,12 @@ body {
     background-size: cover;
 } */
 .bg-image {
-    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248)), url('/storage/app/public/media/bg-home.png');
+    background: linear-gradient(
+            rgb(248, 248, 248, 0.2),
+            rgb(248, 248, 248, 0.5),
+            rgb(248, 248, 248)
+        ),
+        url("/storage/app/public/media/bg-home.png");
     background-size: cover;
     background-position: bottom;
 }
@@ -215,7 +222,6 @@ body {
     background: linear-gradient(rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1)), url('/storage/app/public/media/carrello_home_4.jpeg');
     background-size: cover;
 } */
-
 
 .img-header {
     width: 30vw;
@@ -298,7 +304,6 @@ body {
     overflow-y: auto;
 }
 
-
 /* Insert Ad */
 .img-preview {
     background-position: center;
@@ -314,20 +319,24 @@ body {
 
 /* FOOTER */
 
-.logo-footer{
+.logo-footer {
     max-width: 170px;
     margin-bottom: 6px;
 }
 
-
-.btn-footer{
-    background-color:var(--color-quinary);
-    color:var(--color-primary);
-
+.btn-footer {
+    background-color: var(--color-quinary);
+    color: var(--color-primary);
 }
-.btn-footer:hover{
-    background-color:var(--color-primary);
-    color:var(--color-quinary);
+.btn-footer:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-quinary);
+    border-color: var(--color-quinary);
+}
+
+.logo-social:hover {
+    color: var(--color-primary);
+    scale: 1.1;
 }
 
 /* Modale */
@@ -339,53 +348,32 @@ body {
 .modal-header {
     background-color: var(--color-secondary) !important;
     color: white;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
 }
 
 .modal-footer .btn-danger {
     background-color: var(--color-secondary);
 }
 
-.btn-close {
+.btn-close-modal {
     filter: invert(1); /* Cambia il colore della "X" */
 }
-
-
-/* Modale */
-.modal-content {
-    background-color: var(--color-primary); /* Sfondo rosso chiaro */
-    border-radius: 10px;
-}
-
-.modal-header {
-    background-color: var(--color-secondary) !important;
-    color: white;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.modal-footer .btn-danger {
-    background-color: var(--color-secondary);
-}
-
-.btn-close {
-    filter: invert(1); /* Cambia il colore della "X" */
-}
-
-
 
 /* Form di registrazione */
 
-.bg-page-form{
-    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)),
-
-    url('/storage/app/public/media/sfondo1.webp');
+.bg-page-form {
+    background: linear-gradient(
+            rgb(248, 248, 248, 0.2),
+            rgb(248, 248, 248, 0.5),
+            rgb(248, 248, 248, 1)
+        ),
+        url("/storage/app/public/media/sfondo1.webp");
     /* url('/storage/app/public/media/sfondo2.webp'); */
     /* url('/storage/app/public/media/sfondo3.webp'); */
     background-repeat: no-repeat;
     background-size: cover;
-
 }
-.bg-form{
+.bg-form {
     background: rgb(248, 248, 248, 0.8);
 }
 
@@ -452,9 +440,17 @@ body {
     top: 100px;
 }
 
-.bi-arrow-left-circle:hover {
-    color: var(--color-tertiary);
-    transform: translateX(-5px);
+.bi-arrow-left-circle {
     position: absolute;
+    left: -120px;
 }
 
+.bi-arrow-left-circle:hover {
+    color: var(--color-tertiary);
+}
+
+.border-custom {
+    border: 1px solid var(--color-secondary);
+    /* background-color: var(--color-secondary-op2);
+    backdrop-filter: blur(8px); */
+}

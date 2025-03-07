@@ -99,4 +99,8 @@ return [
     'category' => 'Categoría',
     'file_load' => 'Cargar hasta 5 archivos',
     'back' => 'Atrás',
+    // Dettaglio annuncio
+    'seller' => 'Vendedor',
+    'creationDate' => 'Fecha de creación',
+    'contactSeller' => 'Contactar al vendedor',
 ];
