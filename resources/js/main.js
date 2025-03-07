@@ -5,7 +5,7 @@
 // let dropdownLanguage = document.querySelector("#dropdown-language");
 
 // window.addEventListener("scroll", () => {
-//     if (window.scrollY > 0) {
+    //     if (window.scrollY > 0) {
 //         navbar.classList.add("nav-scrolled");
 //         dropdown.classList.add("nav-scrolled");
 //         dropdownUser.classList.add("nav-scrolled");
@@ -38,3 +38,20 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// ANNULLA STICKY all'apertura modale
+document.addEventListener("DOMContentLoaded", function () {
+    let modal = document.getElementById("rejectModal");
+    let textRevisor = document.querySelector(".text-revisor");
+    
+    modal.addEventListener("show.bs.modal", function () {
+        if (textRevisor) {
+            textRevisor.style.position = "static"; // Disabilita sticky
+        }
+    });
+    
+    modal.addEventListener("hidden.bs.modal", function () {
+        if (textRevisor) {
+            textRevisor.style.position = "sticky"; // Riattiva sticky
+        }
+    });
+})

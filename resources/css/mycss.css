@@ -271,6 +271,33 @@ body {
     border-color: var(--color-quinary);
 }
 
+.img-fluid-revisor {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-fluid-revisor:hover {
+    transform: scale(1.05);
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+
+.text-revisor {
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px); /* Evita che il contenuto sfori */
+    overflow-y: auto; 
+}
+
+
 /* Insert Ad */
 .img-preview {
     background-position: center;
@@ -416,5 +443,4 @@ body {
         transform: scale(1);
     }
 }
-
 
