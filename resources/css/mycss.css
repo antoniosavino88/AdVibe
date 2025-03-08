@@ -189,13 +189,30 @@ body {
 }
 
 .mt-custom {
-    margin-top: 11px !important;
-}
-.m-custom2 {
-    margin-top: 7px !important;
-    left: -8px !important;
+    margin-top: 9px !important;
+    left: -19px !important;
+    border-radius: 0 0 7px 7px;
 }
 
+.m-custom2 {
+    margin-top: 8px !important;
+    left: -8px !important;
+    border-radius: 0 0 7px 7px;
+}
+
+.navbar-toggler {
+    border: 2px solid var(--color-primary);
+}
+
+.navbar-toggler-icon {
+    filter: invert(100%);
+}
+
+.notifica {
+    scale: 0.8;
+    top: -4px;
+    right: -22px;
+}
 /* HOMEPAGE */
 
 /* .bg-image {
@@ -372,7 +389,9 @@ body {
     /* url('/storage/app/public/media/sfondo3.webp'); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
+
 .bg-form {
     background: rgb(248, 248, 248, 0.8);
 }

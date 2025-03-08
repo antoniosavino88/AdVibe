@@ -74,7 +74,7 @@
                 </div>
             @endforelse
             <div class="d-flex justify-content-center my-5 mx-0">
-                <div class="animated-paginator">
+                <div>
                     {{ $ads->links() }}
                 </div>
             </div>

@@ -106,7 +106,7 @@
                             @if (App\Models\Ad::toBeRevisedCount() > 0)
                                 @if (Auth::user()->is_revisor)
                                     <span
-                                        class="position-absolute top-0 start-100 mt-1 translate-middle badge rounded-pill bg-3 text-color-2">
+                                        class="position-absolute mt-1 translate-middle badge rounded-pill bg-3 text-color-2 notifica">
                                         {{ App\Models\Ad::toBeRevisedCount() }}
                                     </span>
                                 @endif
