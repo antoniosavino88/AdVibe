@@ -70,6 +70,10 @@ return [
     'accept' => 'Accetta',
     'noArticlesToReview' => 'Nessun articolo da revisionare',
     'backToHomepage' => 'Torna all\'homepage',
+    'modalTitle' => 'Conferma rifiuto',
+    'modalMessage' => 'Sei sicuro di voler rifiutare questo annuncio?',
+    'modalRejectMessage' => 'Annulla',
+    'modalAcceptMessage' => 'Accetta',
     // Nuove traduzioni per email
     'mail' => 'Mail',
     'userRequestedToWork' => 'Un utente ha chiesto di lavorare con noi',

@@ -85,7 +85,7 @@
                     </div>
                     {{-- COLONNA TESTI --}}
                     <div class="col-md-5 px-5 d-flex flex-column justify-content-between text-revisor">
-                        <h2 class="fw-semibold mb-4 text-title text-center">{{ $ad_to_check->title }}</h2>
+                        <h2 class="fw-semibold mb-4 text-title text-center text-title-show">{{ $ad_to_check->title }}</h2>
                         {{-- Button Accetta/Rifiuta --}}
                         <div class="d-flex justify-content-around">
                             <!-- Pulsante per aprire la modale di conferma rifiuto -->
@@ -108,22 +108,22 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header bg-danger text-white">
-                                            <h5 class="modal-title" id="rejectModalLabel">Conferma Rifiuto</h5>
+                                            <h5 class="modal-title" id="rejectModalLabel">{{__('ui.modalTitle')}}</h5>
                                             <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal"
                                                 aria-label="Chiudi"></button>
                                         </div>
-                                        <div class="modal-body text-center">
-                                            Sei sicuro di voler rifiutare questo annuncio?
+                                        <div class="modal-body text-center" >
+                                            {{__('ui.modalMessage')}}
                                         </div>
                                         <div class="modal-footer justify-content-end">
                                             <button type="button" class="btn mb-3 fw-bold btn-custom-accept btn-sm"
-                                                data-bs-dismiss="modal">Annulla</button>
+                                                data-bs-dismiss="modal">{{__('ui.modalRejectMessage')}}</button>
                                             <!-- Form di conferma -->
                                             <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
                                                 <button type="submit"
-                                                    class="btn mb-3 fw-bold btn-custom-reject btn-sm">Conferma</button>
+                                                    class="btn mb-3 fw-bold btn-custom-reject btn-sm">{{__('ui.modalAcceptMessage')}}</button>
                                             </form>
                                         </div>
                                     </div>
@@ -144,7 +144,7 @@
                         <h5>
                             {{ __('ui.description') }}
                         </h5>
-                        <p>{{ $ad_to_check->description }}</p>
+                        <p class="text-title-show">{{ $ad_to_check->description }}</p>
                     </div>
 
                 </div>

@@ -70,6 +70,10 @@ return [
     'accept' => 'Accept',
     'noArticlesToReview' => 'No articles to review',
     'backToHomepage' => 'Back to homepage',
+    'modalMessage' => 'Are you sure you want to reject this ad?',
+    'modalTitle' => 'Confirm refusal',
+    'modalRejectMessage'=>'Cancel',
+    'modalAcceptMessage' => 'Corfirm',
     // Nuove traduzioni per email
     'mail' => 'Mail',
     'userRequestedToWork' => 'A user has requested to work with us',
