@@ -71,6 +71,10 @@ return [
     'accept' => 'Aceptar',
     'noArticlesToReview' => 'No hay artículos para revisar',
     'backToHomepage' => 'Volver a la página principal',
+    'modalTitle' => 'Confirmar rechazo',
+    'modalMessage'=>'¿Estas seguro de querer rechazar este anuncio?',
+    'modalRejectMessage'=>'Anular',
+    'modalAcceptMessage'=>'Aceptar',
     // Nuove traduzioni per email
     'mail' => 'Correo',
     'userRequestedToWork' => 'Un usuario ha solicitado trabajar con nosotros',

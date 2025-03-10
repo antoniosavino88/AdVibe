@@ -23,7 +23,7 @@
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
-                    <ul class="dropdown-menu bg-2 mt-custom" id="dropdown-menu">
+                    <ul class="dropdown-menu bg-2 mt-custom transition" id="dropdown-menu">
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item dropdown-item-category text-capitalize text-color-1"
@@ -67,7 +67,7 @@
                         <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="25"
                             height="25" class="me-2" />
                     </a>
-                    <ul class="dropdown-menu bg-2 m-custom2" id="dropdown-language" aria-labelledby="languageDropdown">
+                    <ul class="dropdown-menu bg-2 m-custom2 transition" id="dropdown-language" aria-labelledby="languageDropdown">
                         @foreach ($languages as $lang => $name)
                             @if ($lang !== $currentLang)
                                 <!-- Evita di ripetere la lingua attuale -->
@@ -112,7 +112,7 @@
                                 @endif
                             @endif
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end border-0 bg-2 mt-custom" id="dropdown-user">
+                        <ul class="dropdown-menu dropdown-menu-end border-0 bg-2 mt-custom transition" id="dropdown-user">
                             @if (Auth::user()->is_revisor)
                                 <li>
                                     <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'revisor.index' ? 'active' : '' }}

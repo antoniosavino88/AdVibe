@@ -2,5 +2,7 @@
     @push('title')
         AdVibe - Inserisci Annuncio
     @endpush
-    <livewire:insert-ad />
+    <div class="bg-page-form min-vh-100">
+        <livewire:insert-ad />
+    </div>
 </x-layout>
