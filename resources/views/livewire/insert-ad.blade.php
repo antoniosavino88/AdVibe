@@ -1,7 +1,7 @@
 <div>
     {{-- @dd($this->categories) --}}
     <div class="container-fluid p-5 bg-page-form bg-page-form">
-        <h1 class="text-center p-5 text-title display-4 fw-semibold">{{ __('ui.insertAd') }}</h1>
+        <h1 class="text-center p-3 text-title display-4 fw-semibold">{{ __('ui.insertAd') }}</h1>
         <div class="row justify-content-center">
             <x-success />
             <div class="col-12 col-md-6 py-5">
@@ -16,14 +16,15 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">{{ __('ui.price') }} €</label>
-                        <input type="number" step="0.01" class="form-control" wire:model.lazy="price" wire:blur="formatPrice">
+                        <input type="number" step="0.01" class="form-control" wire:model.lazy="price"
+                            wire:blur="formatPrice">
                         @error('price')
                             <div class="text-danger fst-italic"> {{ $message }} </div>
                         @enderror
                     </div>
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="{{ __('ui.describeAd') }}" wire:model.blur='description'></textarea>
-                        <label for="floatingTextarea">{{ __('ui.description') }}</label>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">{{ __('ui.description') }}</label>
+                        <textarea id="description" class="form-control" placeholder="{{ __('ui.describeAd') }}" wire:model.blur='description'></textarea>
                         @error('description')
                             <div class="text-danger fst-italic"> {{ $message }} </div>
                         @enderror

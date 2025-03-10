@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row py-5 justify-content-center align-items-center text-center">
                 <div class="col-12 pt-5">
-                    <h1 class="display-4 text-title">{{ __('ui.adsInCategory') }} <span
+                    <h1 class="text-title display-4 p-3">{{ __('ui.adsInCategory') }} <span
                             class="fw-bold">{{ __('ui.' . $category->name) }}</span></h1>
                 </div>
             </div>

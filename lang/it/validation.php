@@ -190,6 +190,6 @@ return [
     |
     */
 
-    'attributes' => ['title'=>'Il titolo','description'=>'La descrizione', 'price'=>'Il prezzo', 'category_id'=>'La categoria', 'name'=>'Username', ],
+    'attributes' => ['title' => 'Il titolo', 'description' => 'La descrizione', 'price' => 'Il prezzo', 'category_id' => 'La categoria', 'name' => 'Username',],
 
 ];
