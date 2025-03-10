@@ -190,7 +190,7 @@ body {
 
 .mt-custom {
     margin-top: 9px !important;
-    left: -19px !important;
+    right: -12px !important;
     border-radius: 0 0 7px 7px;
 }
 
@@ -472,4 +472,9 @@ body {
     border: 1px solid var(--color-secondary);
     /* background-color: var(--color-secondary-op2);
     backdrop-filter: blur(8px); */
+}
+
+.text-title-show {
+    width: 100%; /* specifica la larghezza massima */
+    word-wrap: break-word;
 }

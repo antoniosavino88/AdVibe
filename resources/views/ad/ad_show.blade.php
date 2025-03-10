@@ -2,7 +2,7 @@
     @push('title')
         {{ __('ui.appName') }} - {{ __('ui.detail') }}
     @endpush
-    <div class="bg-page-form">
+    <div class="bg-page-form min-vh-100">
         <div class="container">
             <div class="col-8 col-md-2 position-fixed z-1 my-5">
                 <a href="{{ route('ad_index') }}" class="mb-5 mt-3"><i
@@ -42,7 +42,7 @@
                 <div class="col-12 col-md-5 my-5 py-5 text-start">
                     <div class="row justify-content-center">
                         <div class="col-12">
-                            <h1 class="text-title"> {{ $ad->title }}</h1>
+                            <h1 class="text-title text-title-show"> {{ $ad->title }}</h1>
                             <h2 class="text-title">€ {{ $ad->price }}</h2>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="row mt-5">
                         <h5>{{ __('ui.description') }}:</h5>
-                        <p class="text-start">{{ $ad->description }}</p>
+                        <p class="text-start text-title-show">{{ $ad->description }}</p>
                     </div>
                 </div>
             </div>
