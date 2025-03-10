@@ -5,7 +5,7 @@
     <div class="bg-page-form">
         <div class="container">
             <div class="col-8 col-md-2 position-fixed z-1 my-5">
-                <a href="{{ route('ad_index') }}" class="mb-5 mt-3 position-relative"><i
+                <a href="{{ route('ad_index') }}" class="mb-5 mt-3"><i
                         class="bi bi-arrow-left-circle fs-1 text-color-5 transition"></i></a>
             </div>
             <div class="row height-custom justify-content-between py-5">
@@ -40,8 +40,8 @@
                 </div>
                 {{-- COLONNA TESTI --}}
                 <div class="col-12 col-md-5 my-5 py-5 text-start">
-                    <div class="row justify-content-end">
-                        <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
                             <h1 class="text-title"> {{ $ad->title }}</h1>
                             <h2 class="text-title">€ {{ $ad->price }}</h2>
                         </div>
