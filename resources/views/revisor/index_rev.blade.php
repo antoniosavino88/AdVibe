@@ -2,8 +2,8 @@
     @push('title')
         {{ __('ui.adVibe') }} - {{ __('ui.revisor') }}
     @endpush
-    <div class="bg-page-form min-vh-100">
-        <div class="container-fluid pt-5">
+    <div class="bg-page-form">
+        <div class="container-fluid pt-5 mb-5">
             <div class="row">
                 {{-- MESSAGGIO DI SUCCESSO --}}
                 <div class="w-100 d-flex justify-content-center">
@@ -36,7 +36,7 @@
                 </div>
             </div>
             @if (!empty($ad_to_check->images))
-                <div class="row justify-content-center py-5 mb-5">
+                <div class="row justify-content-center ">
                     {{-- COLONNA IMMAGINI --}}
                     <div class="col-md-6 shadow bg-1 rounded m-1">
                         <div class="row d-flex align-items-center">
@@ -115,15 +115,15 @@
                                         <div class="modal-body text-center" >
                                             {{__('ui.modalMessage')}}
                                         </div>
-                                        <div class="modal-footer justify-content-end">
-                                            <button type="button" class="btn mb-3 fw-bold btn-custom-accept btn-sm"
+                                        <div class="modal-footer justify-content-around">
+                                            <button type="button" class="btn  fw-bold btn-custom-accept btn-sm"
                                                 data-bs-dismiss="modal">{{__('ui.modalRejectMessage')}}</button>
                                             <!-- Form di conferma -->
                                             <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
                                                 <button type="submit"
-                                                    class="btn mb-3 fw-bold btn-custom-reject btn-sm">{{__('ui.modalAcceptMessage')}}</button>
+                                                    class="btn fw-bold btn-custom-reject btn-sm">{{__('ui.modalAcceptMessage')}}</button>
                                             </form>
                                         </div>
                                     </div>
