@@ -24,7 +24,8 @@
                             <div class="container my-3">
                                 <div class="row justify-content-center">
                                     <div class="col-12 col-md-6 d-flex justify-content-center">
-                                        <a href="{{ route('insert_ad') }}" class="btn btn-custom ">{{ __('ui.insertAd') }}</a>
+                                        <a href="{{ route('insert_ad') }}"
+                                            class="btn btn-custom ">{{ __('ui.insertAd') }}</a>
                                     </div>
                                 </div>
                             </div>

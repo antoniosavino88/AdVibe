@@ -6,16 +6,16 @@
         <div class="container-fluid">
             <div class="row py-5 justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="display-1">
+                    <h1 class="text-center p-3 text-title display-4 fw-semibold">
                         {{ __('ui.resultsForSearch') }}
-                        <span class="fst-italic">{{ $query }}</span>
+                        "<span>{{ $query }}</span>"
                     </h1>
                 </div>
             </div>
 
             <div class="row height-custom justify-content-center align-items-center py-5">
                 @forelse ($ads as $ad)
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 d-flex justify-content-center">
                         <x-ad_card :ad="$ad" />
                     </div>
                 @empty

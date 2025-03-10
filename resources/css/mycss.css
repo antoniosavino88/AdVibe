@@ -137,7 +137,7 @@ body {
 }
 
 .dropdown-item-category:hover {
-    background-color: var(--color-secondary) !important;
+    background-color: inherit;
     color: var(--color-quinary) !important;
 }
 .dropdown-item-language:hover {
@@ -252,6 +252,94 @@ body {
 .btn-custom:hover {
     background-color: var(--color-quinary);
     color: var(--color-primary);
+}
+
+/* CAROSELLO */
+.carosello {
+    height: 40vh;
+    border-radius: 10px;
+}
+.carosello1 {
+    background: url("/storage/app/public/media/sfondo1.webp");
+    height: 100%;
+    background-position: bottom;
+}
+
+.carosello2 {
+    background: url("/storage/app/public/media/sfondo2.webp");
+    height: 100%;
+    background-position: bottom;
+}
+
+.carosello3 {
+    background: url("/storage/app/public/media/sfondo3.webp");
+    height: 100%;
+    background-position: bottom;
+}
+
+.carosello-text {
+    position: absolute;
+    color: var(--color-secondary);
+    top: 20px;
+    left: 0px;
+}
+
+/* WHY ADVIBE */
+.text-gradient {
+    background: linear-gradient(90deg, #f4695d, #f46a5d57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-custom-why-advibe {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: var(--color-primary);
+    min-width: 15rem;
+    min-height: 13rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.card-custom-why-advibe:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+}
+
+.img-triangolo {
+    width: 3.2rem;
+    padding-bottom: 0.8rem;
+    padding-right: 0.5rem;
+}
+
+/* STATISTICHE */
+.stat-box {
+    background: var(--color-primary);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 15px;
+    width: 14rem;
+    height: 10rem;
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    font-size: 50px;
+    color: #ff8a00;
+    margin-bottom: 10px;
 }
 
 /* CARDS */

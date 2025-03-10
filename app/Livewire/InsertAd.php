@@ -22,14 +22,14 @@ class InsertAd extends Component
 
     #[Validate('required|max:100')]
     public $title;
-    #[Validate('required|max:8')]
+    #[Validate('required|max:11')]
     public $price;
     #[Validate('required')]
     public $description;
     #[Validate('required')]
     public $category_id;
 
-public function formatPrice()
+    public function formatPrice()
     {
         $numericValue = str_replace(',', '.', $this->price);
 
