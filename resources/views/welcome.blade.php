@@ -66,6 +66,7 @@
         </div>
     </div>
 
+    {{-- ULTIMI ANNUNCI --}}
     <div class="container">
         <div class="row justify-content-center pb-5">
             <h2 class="text-center p-5 text-title fw-semibold">
@@ -86,4 +87,117 @@
             </div>
         </div>
     </div>
+
+    {{-- CAROSELLO --}}
+    {{-- <div class="container">
+        <div class="row py-5">
+            <div class="col-12">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+                    <div class="carousel-inner carosello">
+             
+                        <div class="carousel-item active carosello1 position-relative" data-bs-interval="4000">
+                            <div
+                                class="carousel-caption d-none d-md-block carosello-text w-100 d-flex justify-content-center">
+                                <div class="container-fluid">
+                                    <h2 class="text-center fw-bold display-5 mb-4 text-gradient text-title"><span><img
+                                                src="{{ asset('./media/triangolo.png') }}" alt=""
+                                                class="img-triangolo"></span>
+                                        Perché
+                                        scegliere
+                                        AdVibe?</h2>
+
+                                    <div class="row g-4 mb-5 pb-5 justify-content-evenly">
+                                        <div class="col-3">
+                                            <div class="card card-custom-why-advibe shadow-lg border-0 text-center">
+                                                <div class="icon-box mx-auto mb-3">
+                                                    <i class="bi bi-lightning-charge-fill"></i>
+                                                </div>
+                                                <h4 class="fw-bold">Veloce & Intuitivo</h4>
+                                                <p class="text-muted">Pubblica annunci in pochi secondi con
+                                                    un'interfaccia
+                                                    semplice e moderna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="card card-custom-why-advibe shadow-lg border-0 text-center">
+                                                <div class="icon-box mx-auto mb-3">
+                                                    <i class="bi bi-shield-lock-fill"></i>
+                                                </div>
+                                                <h4 class="fw-bold">Sicurezza Garantita</h4>
+                                                <p class="text-muted">I tuoi dati e transazioni sono sempre protetti con
+                                                    crittografia avanzata.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="card card-custom-why-advibe shadow-lg border-0 text-center">
+                                                <div class="icon-box mx-auto mb-3">
+                                                    <i class="bi bi-people-fill"></i>
+                                                </div>
+                                                <h4 class="fw-bold">Community Attiva</h4>
+                                                <p class="text-muted">Unisciti a migliaia di utenti che comprano e
+                                                    vendono ogni
+                                                    giorno!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item carosello2 position-relative d-flex justify-content-center"
+                            data-bs-interval="4000">
+                            <div class="carousel-caption d-none d-md-block carosello-text w-100">
+                                <div class="container">
+                                    <h2 class="text-center fw-bold display-5 mb-5">📊<span
+                                            class="text-gradient text-title">I
+                                            Nostri
+                                            Numeri</span>
+                                    </h2>
+
+                                    <div class="row text-center justify-content-evenly">
+                                        <!-- Statistica 1 -->
+                                        <div class="col-2">
+                                            <div class="stat-box shadow-lg p-1 rounded">
+                                                <i class="bi bi-people-fill stat-icon"></i>
+                                                <h3 class="fw-bold counter" data-target="50000">0</h3>
+                                                <p class="text-muted">Utenti Registrati</p>
+                                            </div>
+                                        </div>
+                                        <!-- Statistica 2 -->
+                                        <div class="col-2">
+                                            <div class="stat-box shadow-lg p-1 rounded">
+                                                <i class="bi bi-megaphone-fill stat-icon"></i>
+                                                <h3 class="fw-bold counter" data-target="120000">0</h3>
+                                                <p class="text-muted">Annunci Pubblicati</p>
+                                            </div>
+                                        </div>
+                                        <!-- Statistica 3 -->
+                                        <div class="col-2">
+                                            <div class="stat-box shadow-lg p-1 rounded">
+                                                <i class="bi bi-cash-stack stat-icon"></i>
+                                                <h3 class="fw-bold counter" data-target="85000">0</h3>
+                                                <p class="text-muted">Vendite Concluse</p>
+                                            </div>
+                                        </div>
+                                        <!-- Statistica 4 -->
+                                        <div class="col-2">
+                                            <div class="stat-box shadow-lg p-1 rounded">
+                                                <i class="bi bi-star-fill stat-icon"></i>
+                                                <h3 class="fw-bold counter" data-target="98">0%</h3>
+                                                <p class="text-muted">Clienti Soddisfatti</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+
 </x-layout>

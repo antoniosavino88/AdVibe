@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">{{ __('ui.description') }}</label>
-                        <textarea id="description" class="form-control" placeholder="{{ __('ui.describeAd') }}" wire:model.blur='description'></textarea>
+                        <textarea id="description" class="form-control" wire:model.blur='description'></textarea>
                         @error('description')
                             <div class="text-danger fst-italic"> {{ $message }} </div>
                         @enderror
