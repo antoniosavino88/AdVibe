@@ -44,6 +44,7 @@
                         <div class="col-12">
                             <h1 class="text-title text-title-show"> {{ $ad->title }}</h1>
                             <h2 class="text-title">€ {{ $ad->price }}</h2>
+                            <livewire:wish-list :ad="$ad" />
                         </div>
                     </div>
                     <div class="row mt-4 p-3 border-custom rounded shadow-sm align-items-center">

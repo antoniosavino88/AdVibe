@@ -3,10 +3,12 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Ad;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable
 {
@@ -50,6 +52,12 @@ class User extends Authenticatable
     public function ads(): HasMany
     {
         return $this->hasMany(Ad::class);
+    }
+
+    public function savedAds(): BelongsToMany
+    {
+        return $this->belongsToMany(Ad::class)
+            ->withTimestamps(); // Registra automaticamente created_at e updated_at nella pivot
     }
     // public function categories(): HasMany
     // {
