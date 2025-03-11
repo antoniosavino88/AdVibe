@@ -41,4 +41,21 @@ class RevisorController extends Controller
         Artisan::call("app:make-user-revisor",['email'=>$user->email]);
         return redirect()->back();
     }
+    
+    public function undoLastAction()
+{
+    // Trova l'ultimo annuncio modificato dal revisore attuale
+    $lastAd = Ad::whereNotNull('is_accepted')
+                ->orderBy('updated_at', 'desc')
+                ->first();
+
+    if ($lastAd) {
+        $lastAd->is_accepted = null;
+        $lastAd->save();
+
+        return redirect()->back()->with('success', "L'ultima azione sull'annuncio '{$lastAd->title}' è stata annullata.");
+    }
+
+    return redirect()->back()->with('error', 'Nessuna operazione recente da annullare.');
+}
 }

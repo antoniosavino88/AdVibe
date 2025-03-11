@@ -34,6 +34,8 @@
 
                     </div>
                 </div>
+                <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a>
+
             </div>
             @if (!empty($ad_to_check->images))
                 <div class="row justify-content-center ">

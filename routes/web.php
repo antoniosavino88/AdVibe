@@ -17,12 +17,15 @@ Route::get("/ad/{category}", [AdController::class,'adCategory'])->name("ad_categ
 Route::get('/revisor/index_rev', [RevisorController::class, 'indexRev'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{ad}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{ad}', [RevisorController::class, 'reject'])->name('reject');
+Route::middleware(['auth', 'isRevisor'])->group(function () {
+    Route::get('/revisor/undo', [RevisorController::class, 'undoLastAction'])->name('revisor.undo');
+});
 
 // ROTTA MAIL REVISOR
 Route::get("/revisor/request",[RevisorController::class,'becomeRevisor'])->middleware('auth')->name("become.revisor");
 Route::get("/make/revisor/{user}",[RevisorController::class,'makeRevisor'])->name("make.revisor");
 // ROTTA RICERCA ANNUNCI
 Route::get('/search/ad', [AdController::class, 'searchAds'])->name('ad_search');
-//rotta bandiere
+//ROTTA LINGUA
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
