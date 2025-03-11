@@ -1,4 +1,4 @@
-<x-layout>
+{{-- <x-layout>
     <div class="container">
         <h2>Annulla ultima operazione</h2>
     
@@ -9,4 +9,4 @@
             <button type="submit" class="btn btn-warning">Annulla Ultima Azione</button>
         </form>
     </div>
-</x-layout>
+</x-layout> --}}
