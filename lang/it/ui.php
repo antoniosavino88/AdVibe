@@ -105,5 +105,17 @@ return [
     // Dettaglio annuncio
     'seller' => 'Venditore',
     'creationDate' => 'Data di creazione',
-    'contactSeller' => 'Contatta il venditore'
+    'contactSeller' => 'Contatta il venditore',
+    'personalProfile' => 'Profilo Personale',
+    'myAds' => 'I miei Annunci',
+    'noAdsPosted' => 'Non hai ancora pubblicato annunci',
+    'favouriteAds' => 'I miei preferiti',
+    'noFavouriteAds' => 'Non hai ancora aggiunto annunci tra i preferiti',
+    'rejectedAds' => 'Articoli rifiutati',
+    'action' => 'Azione',
+    'updated' => 'Ultima modifica',
+    'acceptedAds' => 'Annunci accettati',
+    'noAdsRejected' => 'Non ci sono annunci rifiutati',
+    'noAdsAccepted' => 'Non ci sono annunci accettati',
+    'myProfile' => 'Il mio profilo',
 ];
