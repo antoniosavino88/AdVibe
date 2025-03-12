@@ -171,7 +171,7 @@
                         <table class="table table-bordered table-striped shadow-sm">
                             <thead>
                                 <tr>
-                                    <th scope="col">{{ __('ui.title') }}</th>
+                                    <th scope="col">{{__('ui.title') }}</th>
                                     <th scope="col">{{ __('ui.author') }}</th>
                                     <th scope="col">{{ __('ui.updated') }}</th>
                                     <th scope="col">{{ __('ui.action') }}</th>
