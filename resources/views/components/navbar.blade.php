@@ -128,7 +128,7 @@
                             </li>
                             <li>
                                 <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'my.ads' ? 'active' : '' }}"
-                                href="{{ route('my.ads') }}">Il mio profilo</a>
+                                href="{{ route('my.ads') }}">{{ __('ui.myProfile') }}</a>
                             </li>
                             <li class="d-flex justify-content-center ">
                                 <div class="btn btn-danger btn-sm p-0 w-100 mx-2 mt-2">

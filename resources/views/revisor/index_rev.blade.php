@@ -160,74 +160,80 @@
                 </div>
             @endif
         </div>
-        @if ($ads_to_reject->isNotEmpty())
-        <h4>Articoli rifiutati</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Titolo</th>
-                        <th scope="col">Autore</th>
-                        <th scope="col">Ultima modifica</th>
-                        <th scope="col">Azione</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($ads_to_reject as $ad)
-                        <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $ad->title }}</td>
-                            <td>{{ ucfirst($ad->user->name) }}</td>
-                            <td>{{ ($ad->updated_at) }}</td>
-                            <td>
-                                {{-- <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a> --}}
-                                <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
-                                    @csrf
-                                    @method('PATCH')
-                                    <button type="submit" class="btn btn-danger">Annulla Azione</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        @else
-            <p>Non ci sono annunci rifiutati</p> <!-- Messaggio se non ci sono annunci rifiutati -->
-        @endif
 
-        @if ($ads_to_accepted->isNotEmpty())
-        <h4>Articoli accettati</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Titolo</th>
-                        <th scope="col">Autore</th>
-                        <th scope="col">Ultima modifica</th>
-                        <th scope="col">Azione</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($ads_to_accepted as $ad)
-                        <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $ad->title }}</td>
-                            <td>{{ ucfirst($ad->user->name) }}</td>
-                            <td>{{ ($ad->updated_at) }}</td>
-                            <td>
-                                {{-- <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a> --}}
-                                <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
-                                    @csrf
-                                    @method('PATCH')
-                                    <button type="submit" class="btn btn-danger">Annulla Azione</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        @else
-            <p>Non ci sono annunci accettati</p> <!-- Messaggio se non ci sono annunci rifiutati -->
-        @endif
+         <!-- Tabelle Revisore -->
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Colonna per gli annunci rifiutati -->
+                <div class="col-md-6 col-12">
+                    @if ($ads_to_reject->isNotEmpty())
+                        <h4 class="text-danger text-center">{{ __('ui.rejectedAds') }}</h4>
+                        <table class="table table-bordered table-striped shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">{{ __('ui.title') }}</th>
+                                    <th scope="col">{{ __('ui.author') }}</th>
+                                    <th scope="col">{{ __('ui.updated') }}</th>
+                                    <th scope="col">{{ __('ui.action') }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($ads_to_reject as $ad)
+                                    <tr>
+                                        <td>{{ $ad->title }}</td>
+                                        <td>{{ ucfirst($ad->user->name) }}</td>
+                                        <td>{{ $ad->updated_at->format('d/m/Y H:i') }}</td>
+                                        <td class="d-flex justify-content-center">
+                                            <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
+                                                @csrf
+                                                @method('PATCH')
+                                                <button type="submit" class="btn btn-sm fw-bold btn-custom-reject">{{ __('ui.modalRejectMessage') }}</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <p class="text-muted">{{ __('ui.noAdsRejected') }}</p>
+                    @endif
+                </div>
+
+                <!-- Colonna per gli annunci accettati -->
+                <div class="col-md-6 col-12">
+                    @if ($ads_to_accepted->isNotEmpty())
+                        <h4 class="text-success text-center">{{ __('ui.acceptedAds') }}</h4>
+                        <table class="table table-bordered table-striped shadow-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">{{ __('ui.title') }}</th>
+                                    <th scope="col">{{ __('ui.author') }}</th>
+                                    <th scope="col">{{ __('ui.updated') }}</th>
+                                    <th scope="col">{{ __('ui.action') }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($ads_to_accepted as $ad)
+                                    <tr>
+                                        <td>{{ $ad->title }}</td>
+                                        <td>{{ ucfirst($ad->user->name) }}</td>
+                                        <td>{{ $ad->updated_at->format('d/m/Y H:i') }}</td>
+                                        <td class="d-flex justify-content-center">
+                                            <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
+                                                @csrf
+                                                @method('PATCH')
+                                                <button type="submit" class="btn btn-sm fw-bold btn-custom-reject">{{ __('ui.modalRejectMessage') }}</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <p class="text-muted">{{ __('ui.noAdsAccepted') }}</p>
+                    @endif
+                </div>
+            </div>
+        </div>
     </div>
 </x-layout>

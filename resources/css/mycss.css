@@ -408,6 +408,12 @@ body {
     overflow-y: auto;
 }
 
+/* TABELLA */
+th {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-primary) !important;
+}
+
 /* Insert Ad */
 .img-preview {
     background-position: center;
