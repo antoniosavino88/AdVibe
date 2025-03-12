@@ -4,16 +4,16 @@
     @endpush
     <div class="bg-page-form min-vh-100">
         <div class="container-fluid">
-            <div class="row py-5 justify-content-center align-items-center text-center">
+            <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="text-center p-3 text-title display-4 fw-semibold">
+                    <h1 class="text-center mt-5 py-4 text-title display-4 fw-semibold text-gradient-title">
                         {{ __('ui.resultsForSearch') }}
-                        "<span>{{ $query }}</span>"
+                        "<span class="text-title">{{ $query }}</span>"
                     </h1>
                 </div>
             </div>
 
-            <div class="row height-custom justify-content-center align-items-center py-5">
+            <div class="row height-custom justify-content-center align-items-center m-2 py-3">
                 @forelse ($ads as $ad)
                     <div class="col-12 col-md-3 d-flex justify-content-center">
                         <x-ad_card :ad="$ad" />

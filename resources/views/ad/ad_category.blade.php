@@ -7,8 +7,8 @@
         <div class="container-fuild overflow-hidden">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center text-title display-4 fw-semibold mt-5 py-4">{{ __('ui.adsInCategory') }} <span
-                        class="fw-bold">{{ __('ui.' . $category->name) }}</span></h1>
+                    <h1 class="text-center text-title display-4 fw-semibold mt-5 py-4 text-gradient-title">{{ __('ui.adsInCategory') }}: <span
+                        class="fw-bold text-title">{{ __('ui.' . $category->name) }}</span></h1>
                 </div>
             </div>
             <div class="row m-2 py-3 justify-content-center">

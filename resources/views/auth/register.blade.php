@@ -4,7 +4,7 @@
     @endpush
     <div class="bg-page-form min-vh-100">
         <div class="container-fluid p-5 bg-page-form">
-            <h1 class="text-center p-3 text-title display-4 fw-semibold">{{ __('ui.register') }}</h1>
+            <h1 class="text-center p-3 text-title display-4 fw-semibold text-gradient-title">{{ __('ui.register') }}</h1>
             <div class="row justify-content-center">
                 <x-error />
                 <div class="col-12 col-md-6 py-5">

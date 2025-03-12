@@ -69,7 +69,7 @@
     {{-- ULTIMI ANNUNCI --}}
     <div class="container">
         <div class="row justify-content-center pb-5">
-            <h2 class="text-center p-5 text-title fw-semibold">
+            <h2 class="text-center p-5 text-title fw-semibold text-gradient-title display-5">
                 {{ __('ui.latestAds') }}
             </h2>
             <div class="row justify-content-evenly">

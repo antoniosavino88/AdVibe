@@ -63,7 +63,7 @@ return [
     // Dashboard revisor
     'adVibe' => 'AdVibe',
     'revisor' => 'Revisore',
-    'revisorDashboard' => 'Revisore Dashboard',
+    'revisorDashboard' => 'Dashboard Revisore',
     'placeholderImage' => 'Immagine segnaposto',
     'author' => 'Autore',
     'reject' => 'Rifiuta',

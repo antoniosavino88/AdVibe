@@ -42,7 +42,7 @@
                 <div class="col-12 col-md-5 my-5 py-5 text-start">
                     <div class="row justify-content-center">
                         <div class="col-12">
-                            <h1 class="text-title text-title-show"> {{ $ad->title }}</h1>
+                            <h1 class="text-title text-title-show text-color-5"> {{ $ad->title }}</h1>
                             <h2 class="text-title">€ {{ $ad->price }}</h2>
                             <livewire:wish-list :ad="$ad" />
                         </div>

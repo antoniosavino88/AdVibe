@@ -4,14 +4,16 @@
     --color-tertiary: #F5B83D;
     --color-quaternary: #227C9D;
     --color-quinary: #D62828; */
-
-    --color-primary: #f8f8f8;
+    
+    --color-primary: rgb(248, 248, 248);
     --color-secondary: #001829;
     --color-secondary-op: #0018299e;
     --color-secondary-op2: #00182907;
     --color-tertiary: #50c4c9;
     --color-quaternary: #bd89ad;
     --color-quinary: rgb(244, 105, 93);
+    --color-quinary-op2: rgba(244, 106, 93, 0.2);
+    --color-quinary-op: rgba(244, 106, 93, 0.341);
     /* --color-sixth: #f5b83d; */
     --color-sixth: #9cdced;
 }
@@ -20,6 +22,10 @@
 :root {
     --font-primary: "Montserrat", sans-serif;
     --font-secondary: "Karla", sans-serif;
+    --font-primary1:"Genos", sans-serif;
+    --font-primary2:"Ubuntu Sans Mono", monospace;
+    --font-primary3:"Sono", monospace;
+    --font-primary4:"Source Code Pro", monospace;
 }
 
 /* FONT APPLICATI */
@@ -27,7 +33,15 @@
     font-family: var(--font-secondary);
 }
 .text-title {
-    font-family: var(--font-primary);
+    /* font-family: var(--font-primary); */
+    font-family: var(--font-primary1);
+}
+
+.text-gradient-title {
+    background: linear-gradient(90deg, var(--color-quinary),var(--color-quinary-op));
+    /* background: linear-gradient(90deg, var(--color-secondary),var(--color-tertiary)); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 body {
@@ -57,7 +71,7 @@ body {
     background-color: var(--color-quinary);
 }
 /* .bg-6 {
-    background-color: #f5b83d;
+background-color: #f5b83d;
 } */
 
 .bg-6 {
@@ -216,28 +230,28 @@ body {
 /* HOMEPAGE */
 
 /* .bg-image {
-    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/Carrello_spesa.png');
+background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/Carrello_spesa.png');
 
-    background-size: cover;
+background-size: cover;
 } */
 .bg-image {
     background: linear-gradient(
-            rgb(248, 248, 248, 0.2),
-            rgb(248, 248, 248, 0.5),
-            rgb(248, 248, 248)
-        ),
-        url("/storage/app/public/media/bg-home.png");
+    rgb(248, 248, 248, 0.2),
+    rgb(248, 248, 248, 0.5),
+    rgb(248, 248, 248)
+    ),
+    url("/storage/app/public/media/bg-home.png");
     background-size: cover;
     background-position: bottom;
 }
 /* .bg-image {
-    background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/carrello_home_3.jpeg');
-    background-size: cover;
+background: linear-gradient(rgb(248, 248, 248, 0.2), rgb(248, 248, 248, 0.5), rgb(248, 248, 248, 1.0)), url('/storage/app/public/media/carrello_home_3.jpeg');
+background-size: cover;
 } */
 
 /* .bg-image {
-    background: linear-gradient(rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1)), url('/storage/app/public/media/carrello_home_4.jpeg');
-    background-size: cover;
+background: linear-gradient(rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1), rgb(248, 248, 248, 0.1)), url('/storage/app/public/media/carrello_home_4.jpeg');
+background-size: cover;
 } */
 
 .img-header {
@@ -286,7 +300,7 @@ body {
 
 /* WHY ADVIBE */
 .text-gradient {
-    background: linear-gradient(90deg, #f4695d, #f46a5d57);
+    background: linear-gradient(90deg, var(--color-quinary),var(--color-quinary-op));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -345,7 +359,14 @@ body {
 /* CARDS */
 .card-container {
     width: 18rem;
+    background: linear-gradient(180deg, var(--color-secondary-op), var(--color-primary));
+    backdrop-filter: blur(10px);
 }
+
+/* .card-gradient{
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--color-secondary-op2), rgba(248, 248, 248, 0.5));;
+} */
 
 .img-card {
     width: 100%;
@@ -354,7 +375,9 @@ body {
     image-rendering: optimizeQuality;
     object-fit: cover;
 }
-
+.btn-category{
+    background-color: inherit;
+}
 .btn-category:hover {
     background-color: var(--color-tertiary);
 }
@@ -467,11 +490,11 @@ body {
 
 .bg-page-form {
     background: linear-gradient(
-            rgb(248, 248, 248, 0.2),
-            rgb(248, 248, 248, 0.5),
-            rgb(248, 248, 248, 1)
-        ),
-        url("/storage/app/public/media/sfondo1.webp");
+    rgb(248, 248, 248, 0.2),
+    rgb(248, 248, 248, 0.5),
+    rgb(248, 248, 248, 1)
+    ),
+    url("/storage/app/public/media/sfondo1.webp");
     /* url('/storage/app/public/media/sfondo2.webp'); */
     /* url('/storage/app/public/media/sfondo3.webp'); */
     /* background-repeat: no-repeat; */

@@ -3,7 +3,7 @@
         {{ __('ui.adVibe') }} - {{ __('ui.revisor') }}
     @endpush
     <div class="bg-page-form">
-        <div class="container-fluid pt-5 mb-5">
+        <div class="container-fluid">
             <div class="row">
                 {{-- MESSAGGIO DI SUCCESSO --}}
                 <div class="w-100 d-flex justify-content-center">
@@ -28,13 +28,13 @@
                 <div class="col-12">
                     {{-- TITOLO PAGINA --}}
                     <div>
-                        <h1 class="text-center pb-2 display-4 fw-semibold text-title">
+                        <h1 class="text-center mt-5 py-4 display-4 fw-semibold text-title text-gradient-title">
                             {{ __('ui.revisorDashboard') }}
                         </h1>
 
                     </div>
                 </div>
-                <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a>
+                <a href="{{ route('revisor.undo') }}" class="btn btn-danger ">Annulla Ultima Azione</a>
 
             </div>
             @if (!empty($ad_to_check->images))
@@ -153,7 +153,7 @@
             @else
                 <div class="row justify-content-center align-items-center height-custom text-center">
                     <div class="col-12">
-                        <h1 class="fst-italic display-4">{{ __('ui.noArticlesToReview') }}</h1>
+                        <h1 class="fst-italic display-4 text-title">{{ __('ui.noArticlesToReview') }}</h1>
                         <a href="{{ route('welcome') }}" class="mt-5 btn btn-custom">{{ __('ui.backToHomepage') }}</a>
                     </div>
                 </div>
