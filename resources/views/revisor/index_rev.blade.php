@@ -2,7 +2,7 @@
     @push('title')
         {{ __('ui.adVibe') }} - {{ __('ui.revisor') }}
     @endpush
-    <div class="bg-page-form">
+    <div class="bg-page-form min-vh-100">
         <div class="container-fluid pt-5 mb-5">
             <div class="row">
                 {{-- MESSAGGIO DI SUCCESSO --}}
@@ -35,8 +35,6 @@
                     </div>
                 </div>
             </div>
-            {{-- @if (!empty($ad_to_check->images && Auth::user()->id !== $ad_to_check->user_id)) --}}
-            {{-- @if (!empty($ad_to_check) && !empty($ad_to_check->images) && Auth::user()->id !== $ad_to_check->user_id) --}}
             @if (!empty($ad_to_check->images))
                 <div class="row justify-content-center">
                     {{-- COLONNA IMMAGINI --}}
@@ -163,12 +161,14 @@
             @endif
         </div>
         @if ($ads_to_reject->isNotEmpty())
+        <h4>Articoli rifiutati</h4>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titolo</th>
                         <th scope="col">Autore</th>
+                        <th scope="col">Ultima modifica</th>
                         <th scope="col">Azione</th>
                     </tr>
                 </thead>
@@ -178,15 +178,56 @@
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $ad->title }}</td>
                             <td>{{ ucfirst($ad->user->name) }}</td>
+                            <td>{{ ($ad->updated_at) }}</td>
                             <td>
-                                <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a>
+                                {{-- <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a> --}}
+                                <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-danger">Annulla Azione</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
         @else
-            <p>Non ci sono annunci</p> <!-- Messaggio se non ci sono annunci rifiutati -->
+            <p>Non ci sono annunci rifiutati</p> <!-- Messaggio se non ci sono annunci rifiutati -->
+        @endif
+
+        @if ($ads_to_accepted->isNotEmpty())
+        <h4>Articoli accettati</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titolo</th>
+                        <th scope="col">Autore</th>
+                        <th scope="col">Ultima modifica</th>
+                        <th scope="col">Azione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($ads_to_accepted as $ad)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $ad->title }}</td>
+                            <td>{{ ucfirst($ad->user->name) }}</td>
+                            <td>{{ ($ad->updated_at) }}</td>
+                            <td>
+                                {{-- <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a> --}}
+                                <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-danger">Annulla Azione</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @else
+            <p>Non ci sono annunci accettati</p> <!-- Messaggio se non ci sono annunci rifiutati -->
         @endif
     </div>
 </x-layout>

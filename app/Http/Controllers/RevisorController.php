@@ -52,7 +52,11 @@ public function indexRev()
         ->where('user_id', '!=', Auth::id()) // Esclude gli annunci dell'utente attuale
         ->get(); // Usa get() per ottenere tutti i risultati
 
-    return view('revisor.index_rev', compact('ad_to_check', 'ads_to_reject'));
+        $ads_to_accepted = Ad::where('is_accepted', true)
+        ->where('user_id', '!=', Auth::id()) // Esclude gli annunci dell'utente attuale
+        ->get(); // Usa get() per ottenere tutti i risultat
+
+    return view('revisor.index_rev', compact('ad_to_check', 'ads_to_reject', 'ads_to_accepted'));
 }
 
 
@@ -80,20 +84,29 @@ public function indexRev()
         return redirect()->back();
     }
 
-    public function undoLastAction()
+//     public function undoLastAction()
+// {
+//     // Trova l'ultimo annuncio modificato dal revisore attuale
+//     $lastAd = Ad::whereNotNull('is_accepted')
+//                 ->orderBy('updated_at', 'desc')
+//                 ->first();
+
+//     if ($lastAd) {
+//         $lastAd->is_accepted = null;
+//         $lastAd->save();
+
+//         return redirect()->back()->with('success', "L'ultima azione sull'annuncio '{$lastAd->title}' è stata annullata.");
+//     }
+
+//     return redirect()->back()->with('error', 'Nessuna operazione recente da annullare.');
+// }
+
+public function undoAdAction(Ad $ad)
 {
-    // Trova l'ultimo annuncio modificato dal revisore attuale
-    $lastAd = Ad::whereNotNull('is_accepted')
-                ->orderBy('updated_at', 'desc')
-                ->first();
+    $ad->is_accepted = null;
+    $ad->save();
 
-    if ($lastAd) {
-        $lastAd->is_accepted = null;
-        $lastAd->save();
-
-        return redirect()->back()->with('success', "L'ultima azione sull'annuncio '{$lastAd->title}' è stata annullata.");
-    }
-
-    return redirect()->back()->with('error', 'Nessuna operazione recente da annullare.');
+    return redirect()->back()->with('success', "L'azione sull'annuncio '{$ad->title}' è stata annullata.");
 }
+
 }
