@@ -41,6 +41,7 @@ return [
     'teamName' => 'DevAlchemy',
     'teamDescription' => 'DevAlchemy è il team di sviluppatori visionari che ha trasformato un\'idea in realtà, creando AdVibe, la piattaforma di annunci che sta rivoluzionando il mercato. Chi sono? Un gruppo di esperti appassionati di tecnologia, con una solida esperienza nello sviluppo di piattaforme web innovative. La loro missione è creare soluzioni digitali intuitive, performanti e user-friendly. Cosa fanno? Curano ogni dettaglio di AdVibe, dal design all\'implementazione delle funzionalità, garantendo un\'esperienza utente ottimale. Sono sempre alla ricerca di nuove tecnologie per migliorare costantemente la piattaforma.',
     'copyright' => 'Copyright',
+    'profile' => 'Profilo',
     // Navbar
     'toggleNavigation' => 'Attiva/disattiva navigazione',
     'home' => 'Home',
@@ -118,4 +119,7 @@ return [
     'noAdsRejected' => 'Non ci sono annunci rifiutati',
     'noAdsAccepted' => 'Non ci sono annunci accettati',
     'myProfile' => 'Il mio profilo',
+    // Profilo utente
+    'hello' => 'Ciao',
+    'yourProfile' => ', ecco il tuo profilo',
 ];

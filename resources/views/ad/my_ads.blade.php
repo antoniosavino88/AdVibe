@@ -1,9 +1,14 @@
 <x-layout>
+    @push('title')
+        {{ __('ui.adVibe') }} - {{ __('ui.profile') }}
+    @endpush
     <div class="bg-page-form min-vh-100">
         <div class="container-fuild overflow-hidden">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center mt-5 text-title text-color-2 ">Ciao <span class="text-color-5 text-title">{{ ucfirst(Auth::user()->name) }}</span>, ecco il tuo profilo</h1>
+                    <h1 class="text-center mt-5 text-title text-color-2 ">{{ __('ui.hello') }} <span
+                            class="text-color-5 text-title">{{ ucfirst(Auth::user()->name) }}</span>{{ __('ui.yourProfile') }}
+                    </h1>
                 </div>
                 <div class="col-12">
                     <h2 class="ms-4 text-title fs-1 fw-semibold mt-3 py-4 text-gradient-title">{{ __('ui.myAds') }}</h2>
@@ -22,7 +27,8 @@
             @endif
             <div class="row">
                 <div class="col-12">
-                    <h2 class="ms-4 text-title fs-1 fw-semibold mt-3 py-4 text-gradient-title">{{ __('ui.favouriteAds') }}</h2>
+                    <h2 class="ms-4 text-title fs-1 fw-semibold mt-3 py-4 text-gradient-title">
+                        {{ __('ui.favouriteAds') }}</h2>
                 </div>
             </div>
             @if ($favoriteAds->isEmpty())

@@ -3,7 +3,7 @@
         {{ __('ui.adVibe') }} - {{ __('ui.revisor') }}
     @endpush
     <div class="bg-page-form min-vh-100">
-        <div class="container-fluid pt-5 mb-5">
+        <div class="container-fluid pt-5 mb-5 pb-5">
             <div class="row">
                 {{-- MESSAGGIO DI SUCCESSO --}}
                 <div class="w-100 d-flex justify-content-center">
@@ -38,10 +38,10 @@
             @if (!empty($ad_to_check->images))
                 <div class="row justify-content-center">
                     {{-- COLONNA IMMAGINI --}}
-                    <div class="col-md-6 shadow bg-1 rounded m-1">
+                    <div class="col-md-5 shadow bg-1 rounded m-1">
                         <div class="row d-flex align-items-center">
                             @foreach ($ad_to_check->images as $key => $image)
-                                <div class="col-6 justify-content-center p-3">
+                                <div class="col-6 d-flex justify-content-center flex-column p-3 m-4">
                                     <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid-revisor rounded bg-1"
                                         alt="Immagine {{ $key + 1 }} dell'articolo '{{ $ad_to_check->title }}'">
                                     <div class="mt-2 text-truncate">
@@ -161,8 +161,8 @@
             @endif
         </div>
 
-         <!-- Tabelle Revisore -->
-        <div class="container mt-4">
+        <!-- Tabelle Revisore -->
+        <div class="container my-5 py-5">
             <div class="row">
                 <!-- Colonna per gli annunci rifiutati -->
                 <div class="col-md-6 col-12">
@@ -171,7 +171,7 @@
                         <table class="table table-bordered table-striped shadow-sm">
                             <thead>
                                 <tr>
-                                    <th scope="col">{{__('ui.title') }}</th>
+                                    <th scope="col">{{ __('ui.title') }}</th>
                                     <th scope="col">{{ __('ui.author') }}</th>
                                     <th scope="col">{{ __('ui.updated') }}</th>
                                     <th scope="col">{{ __('ui.action') }}</th>
@@ -184,10 +184,12 @@
                                         <td>{{ ucfirst($ad->user->name) }}</td>
                                         <td>{{ $ad->updated_at->format('d/m/Y H:i') }}</td>
                                         <td class="d-flex justify-content-center">
-                                            <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
+                                            <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}"
+                                                method="POST">
                                                 @csrf
                                                 @method('PATCH')
-                                                <button type="submit" class="btn btn-sm fw-bold btn-custom-reject">{{ __('ui.modalRejectMessage') }}</button>
+                                                <button type="submit"
+                                                    class="btn btn-sm fw-bold btn-custom-reject">{{ __('ui.modalRejectMessage') }}</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -195,7 +197,7 @@
                             </tbody>
                         </table>
                     @else
-                        <p class="text-muted">{{ __('ui.noAdsRejected') }}</p>
+                        <p class="text-muted text-center">{{ __('ui.noAdsRejected') }}</p>
                     @endif
                 </div>
 
@@ -219,10 +221,12 @@
                                         <td>{{ ucfirst($ad->user->name) }}</td>
                                         <td>{{ $ad->updated_at->format('d/m/Y H:i') }}</td>
                                         <td class="d-flex justify-content-center">
-                                            <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}" method="POST">
+                                            <form action="{{ route('revisor.undo', ['ad' => $ad->id]) }}"
+                                                method="POST">
                                                 @csrf
                                                 @method('PATCH')
-                                                <button type="submit" class="btn btn-sm fw-bold btn-custom-reject">{{ __('ui.modalRejectMessage') }}</button>
+                                                <button type="submit"
+                                                    class="btn btn-sm fw-bold btn-custom-reject">{{ __('ui.modalRejectMessage') }}</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -230,7 +234,7 @@
                             </tbody>
                         </table>
                     @else
-                        <p class="text-muted">{{ __('ui.noAdsAccepted') }}</p>
+                        <p class="text-muted text-center">{{ __('ui.noAdsAccepted') }}</p>
                     @endif
                 </div>
             </div>

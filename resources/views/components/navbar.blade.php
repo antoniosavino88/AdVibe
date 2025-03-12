@@ -48,7 +48,7 @@
                             <button type="submit"
                                 class="input-group-text btn btn-search border-custom2 transition border-1 "
                                 id="basic-addon2">
-                                {{ __('ui.search') }}
+                                <i class="bi bi-search"></i>
                             </button>
                         </div>
                     </form>
@@ -67,7 +67,8 @@
                         <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="25"
                             height="25" class="me-2" />
                     </a>
-                    <ul class="dropdown-menu bg-2 m-custom2 transition" id="dropdown-language" aria-labelledby="languageDropdown">
+                    <ul class="dropdown-menu bg-2 m-custom2 transition" id="dropdown-language"
+                        aria-labelledby="languageDropdown">
                         @foreach ($languages as $lang => $name)
                             @if ($lang !== $currentLang)
                                 <!-- Evita di ripetere la lingua attuale -->
@@ -128,7 +129,7 @@
                             </li>
                             <li>
                                 <a class="nav-link text-color-1 {{ Route::currentRouteName() == 'my.ads' ? 'active' : '' }}"
-                                href="{{ route('my.ads') }}">{{ __('ui.myProfile') }}</a>
+                                    href="{{ route('my.ads') }}">{{ __('ui.myProfile') }}</a>
                             </li>
                             <li class="d-flex justify-content-center ">
                                 <div class="btn btn-danger btn-sm p-0 w-100 mx-2 mt-2">
