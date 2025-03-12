@@ -13,11 +13,49 @@ use Illuminate\Routing\Controllers\HasMiddleware;
 
 class RevisorController extends Controller
 {
-    public function indexRev()
-    {
-        $ad_to_check = Ad::where('is_accepted', null)->first();
-        return view('revisor.index_rev', compact('ad_to_check'));
-    }
+    // public function indexRev()
+    // {
+    //     $ad_to_check = Ad::where('is_accepted', null)->first();
+    //     return view('revisor.index_rev', compact('ad_to_check'));
+    // }
+
+//     public function indexRev()
+// {
+//     $ad_to_check = Ad::where('is_accepted', null)
+//         ->where('user_id', '!=', Auth::id()) // Esclude gli annunci dell'utente attuale
+//         ->first();
+
+//         dd($ad_to_check);
+
+//     return view('revisor.index_rev', compact('ad_to_check'));
+// }
+
+// public function indexRevReject()
+// {
+//     // Recupera tutti gli annunci rifiutati (is_accepted = false)
+//     $ads_to_reject = Ad::where('is_accepted', false)
+//     ->where('user_id', '!=', Auth::id()) // Esclude gli annunci creati dall'utente attuale
+//     ->get(); // Usa get() per ottenere tutti i risultati, non solo il primo
+
+//     return view('revisor.index_rev', compact('ads_to_reject'));
+// }
+
+public function indexRev()
+{
+    // Recupera gli annunci in attesa di revisione (is_accepted = null)
+    $ad_to_check = Ad::where('is_accepted', null)
+        ->where('user_id', '!=', Auth::id()) // Esclude gli annunci dell'utente attuale
+        ->first();
+
+    // Recupera gli annunci rifiutati (is_accepted = false)
+    $ads_to_reject = Ad::where('is_accepted', false)
+        ->where('user_id', '!=', Auth::id()) // Esclude gli annunci dell'utente attuale
+        ->get(); // Usa get() per ottenere tutti i risultati
+
+    return view('revisor.index_rev', compact('ad_to_check', 'ads_to_reject'));
+}
+
+
 
     public function accept(Ad $ad)
     {
@@ -41,7 +79,7 @@ class RevisorController extends Controller
         Artisan::call("app:make-user-revisor",['email'=>$user->email]);
         return redirect()->back();
     }
-    
+
     public function undoLastAction()
 {
     // Trova l'ultimo annuncio modificato dal revisore attuale

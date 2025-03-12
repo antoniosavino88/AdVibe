@@ -34,11 +34,11 @@
 
                     </div>
                 </div>
-                <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a>
-
             </div>
+            {{-- @if (!empty($ad_to_check->images && Auth::user()->id !== $ad_to_check->user_id)) --}}
+            {{-- @if (!empty($ad_to_check) && !empty($ad_to_check->images) && Auth::user()->id !== $ad_to_check->user_id) --}}
             @if (!empty($ad_to_check->images))
-                <div class="row justify-content-center ">
+                <div class="row justify-content-center">
                     {{-- COLONNA IMMAGINI --}}
                     <div class="col-md-6 shadow bg-1 rounded m-1">
                         <div class="row d-flex align-items-center">
@@ -87,7 +87,8 @@
                     </div>
                     {{-- COLONNA TESTI --}}
                     <div class="col-md-5 px-5 d-flex flex-column justify-content-between text-revisor">
-                        <h2 class="fw-semibold mb-4 text-title text-center text-title-show">{{ $ad_to_check->title }}</h2>
+                        <h2 class="fw-semibold mb-4 text-title text-center text-title-show">{{ $ad_to_check->title }}
+                        </h2>
                         {{-- Button Accetta/Rifiuta --}}
                         <div class="d-flex justify-content-around">
                             <!-- Pulsante per aprire la modale di conferma rifiuto -->
@@ -110,22 +111,24 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header bg-danger text-white">
-                                            <h5 class="modal-title" id="rejectModalLabel">{{__('ui.modalTitle')}}</h5>
-                                            <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal"
-                                                aria-label="Chiudi"></button>
+                                            <h5 class="modal-title" id="rejectModalLabel">{{ __('ui.modalTitle') }}
+                                            </h5>
+                                            <button type="button" class="btn-close btn-close-modal"
+                                                data-bs-dismiss="modal" aria-label="Chiudi"></button>
                                         </div>
-                                        <div class="modal-body text-center" >
-                                            {{__('ui.modalMessage')}}
+                                        <div class="modal-body text-center">
+                                            {{ __('ui.modalMessage') }}
                                         </div>
                                         <div class="modal-footer justify-content-around">
                                             <button type="button" class="btn  fw-bold btn-custom-accept btn-sm"
-                                                data-bs-dismiss="modal">{{__('ui.modalRejectMessage')}}</button>
+                                                data-bs-dismiss="modal">{{ __('ui.modalRejectMessage') }}</button>
                                             <!-- Form di conferma -->
-                                            <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
+                                            <form action="{{ route('reject', ['ad' => $ad_to_check]) }}"
+                                                method="POST">
                                                 @csrf
                                                 @method('PATCH')
                                                 <button type="submit"
-                                                    class="btn fw-bold btn-custom-reject btn-sm">{{__('ui.modalAcceptMessage')}}</button>
+                                                    class="btn fw-bold btn-custom-reject btn-sm">{{ __('ui.modalAcceptMessage') }}</button>
                                             </form>
                                         </div>
                                     </div>
@@ -159,5 +162,31 @@
                 </div>
             @endif
         </div>
+        @if ($ads_to_reject->isNotEmpty())
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titolo</th>
+                        <th scope="col">Autore</th>
+                        <th scope="col">Azione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($ads_to_reject as $ad)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $ad->title }}</td>
+                            <td>{{ ucfirst($ad->user->name) }}</td>
+                            <td>
+                                <a href="{{ route('revisor.undo') }}" class="btn btn-danger">Annulla Ultima Azione</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @else
+            <p>Non ci sono annunci</p> <!-- Messaggio se non ci sono annunci rifiutati -->
+        @endif
     </div>
 </x-layout>
