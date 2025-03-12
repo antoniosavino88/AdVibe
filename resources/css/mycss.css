@@ -4,7 +4,7 @@
     --color-tertiary: #F5B83D;
     --color-quaternary: #227C9D;
     --color-quinary: #D62828; */
-    
+
     --color-primary: rgb(248, 248, 248);
     --color-primary-op: rgba(248, 248, 248, 0.5);
     --color-secondary: #001829;
@@ -23,10 +23,10 @@
 :root {
     --font-primary: "Montserrat", sans-serif;
     --font-secondary: "Karla", sans-serif;
-    --font-primary1:"Genos", sans-serif;
-    --font-primary2:"Ubuntu Sans Mono", monospace;
-    --font-primary3:"Sono", monospace;
-    --font-primary4:"Source Code Pro", monospace;
+    --font-primary1: "Genos", sans-serif;
+    --font-primary2: "Ubuntu Sans Mono", monospace;
+    --font-primary3: "Sono", monospace;
+    --font-primary4: "Source Code Pro", monospace;
 }
 
 /* FONT APPLICATI */
@@ -39,7 +39,11 @@
 }
 
 .text-gradient-title {
-    background: linear-gradient(90deg, var(--color-quinary),var(--color-quinary-op));
+    background: linear-gradient(
+        90deg,
+        var(--color-quinary),
+        var(--color-quinary-op)
+    );
     /* background: linear-gradient(90deg, var(--color-secondary),var(--color-tertiary)); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -237,11 +241,11 @@ background-size: cover;
 } */
 .bg-image {
     background: linear-gradient(
-    rgb(248, 248, 248, 0.2),
-    rgb(248, 248, 248, 0.5),
-    rgb(248, 248, 248)
-    ),
-    url("/storage/app/public/media/bg-home.png");
+            rgb(248, 248, 248, 0.2),
+            rgb(248, 248, 248, 0.5),
+            rgb(248, 248, 248)
+        ),
+        url("/storage/app/public/media/bg-home.png");
     background-size: cover;
     background-position: bottom;
 }
@@ -301,7 +305,11 @@ background-size: cover;
 
 /* WHY ADVIBE */
 .text-gradient {
-    background: linear-gradient(90deg, var(--color-quinary),var(--color-quinary-op));
+    background: linear-gradient(
+        90deg,
+        var(--color-quinary),
+        var(--color-quinary-op)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -360,7 +368,11 @@ background-size: cover;
 /* CARDS */
 .card-container {
     width: 18rem;
-    background: linear-gradient(180deg, var(--color-secondary-op2), rgba(248, 248, 248, 0.5));
+    background: linear-gradient(
+        180deg,
+        var(--color-secondary-op2),
+        rgba(248, 248, 248, 0.5)
+    );
     backdrop-filter: blur(10px);
 }
 
@@ -376,7 +388,7 @@ background-size: cover;
     image-rendering: optimizeQuality;
     object-fit: cover;
 }
-.btn-category{
+.btn-category {
     background-color: inherit;
 }
 .btn-category:hover {
@@ -462,6 +474,7 @@ th {
     background-color: var(--color-quinary);
     color: var(--color-primary);
 }
+
 .btn-footer:hover {
     background-color: var(--color-secondary);
     color: var(--color-quinary);
@@ -497,11 +510,11 @@ th {
 
 .bg-page-form {
     background: linear-gradient(
-    rgb(248, 248, 248, 0.2),
-    rgb(248, 248, 248, 0.5),
-    rgb(248, 248, 248, 1)
-    ),
-    url("/storage/app/public/media/sfondo1.webp");
+            rgb(248, 248, 248, 0.2),
+            rgb(248, 248, 248, 0.5),
+            rgb(248, 248, 248, 1)
+        ),
+        url("/storage/app/public/media/sfondo1.webp");
     /* url('/storage/app/public/media/sfondo2.webp'); */
     /* url('/storage/app/public/media/sfondo3.webp'); */
     /* background-repeat: no-repeat; */
@@ -603,12 +616,43 @@ th {
     word-wrap: break-word;
 }
 
-.wish-list-icon{
+.wish-list-icon {
     position: absolute;
     right: 10px;
     margin-top: 6px;
 }
 
-.bi-heart{
+.bi-heart {
     color: var(--color-quinary);
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+    .bi-arrow-left-circle {
+        left: 0;
+    }
+
+    .colonna-testi {
+        padding: 2rem;
+    }
+
+    .text-mobile {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .btn-footer {
+        text-wrap: nowrap;
+        font-size: 12px;
+    }
+
+    .text-revisor {
+        position: static;
+        margin-bottom: 6rem;
+    }
+
+    .bg-page-form {
+        min-height: 100vh;
+    }
 }

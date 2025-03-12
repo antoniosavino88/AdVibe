@@ -15,7 +15,7 @@
 
             <div class="row height-custom justify-content-center align-items-center m-2 py-3">
                 @forelse ($ads as $ad)
-                    <div class="col-12 col-md-3 d-flex justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
                         <x-ad_card :ad="$ad" />
                     </div>
                 @empty

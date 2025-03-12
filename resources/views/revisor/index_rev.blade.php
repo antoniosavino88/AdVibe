@@ -3,7 +3,7 @@
         {{ __('ui.adVibe') }} - {{ __('ui.revisor') }}
     @endpush
     <div class="bg-page-form min-vh-100">
-        <div class="container-fluid pt-5 mb-5 pb-5">
+        <div class="container-fluid pt-5 mb-0 pb-0 mb-lg-5 pb-lg-5">
             <div class="row">
                 {{-- MESSAGGIO DI SUCCESSO --}}
                 <div class="w-100 d-flex justify-content-center">
@@ -38,7 +38,7 @@
             @if (!empty($ad_to_check->images))
                 <div class="row justify-content-center">
                     {{-- COLONNA IMMAGINI --}}
-                    <div class="col-md-5 shadow bg-1 rounded m-1">
+                    <div class="col-10 col-lg-5 shadow bg-1 rounded m-1 order-2 order-lg-1">
                         <div class="row d-flex align-items-center">
                             @foreach ($ad_to_check->images as $key => $image)
                                 <div class="col-6 d-flex justify-content-center flex-column p-3 m-4">
@@ -84,72 +84,77 @@
 
                     </div>
                     {{-- COLONNA TESTI --}}
-                    <div class="col-md-5 px-5 d-flex flex-column justify-content-between text-revisor">
-                        <h2 class="fw-semibold mb-4 text-title text-center text-title-show">{{ $ad_to_check->title }}
-                        </h2>
-                        {{-- Button Accetta/Rifiuta --}}
-                        <div class="d-flex justify-content-around">
-                            <!-- Pulsante per aprire la modale di conferma rifiuto -->
-                            <button type="button" class="btn mb-3 py-2 px-5 fw-bold btn-custom-reject"
-                                data-bs-toggle="modal" data-bs-target="#rejectModal">
-                                {{ __('ui.reject') }}
-                            </button>
-                            <!-- Form per accettare l'annuncio -->
-                            <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button class="btn mb-3 py-2 px-5 fw-bold btn-custom-accept ">
-                                    {{ __('ui.accept') }}
+                    <div class="col-10 col-lg-5 px-5 mt-5 mt-lg-0 d-flex flex-column text-revisor order-1 order-lg-2">
+                        <div>
+                            <h2 class="fw-semibold mb-4 text-title text-center text-title-show">
+                                {{ $ad_to_check->title }}
+                            </h2>
+                            {{-- Button Accetta/Rifiuta --}}
+                            <div class="d-flex justify-content-around flex-column flex-lg-row">
+                                <!-- Pulsante per aprire la modale di conferma rifiuto -->
+                                <button type="button" class="btn mb-3 py-2 px-5 fw-bold btn-custom-reject"
+                                    data-bs-toggle="modal" data-bs-target="#rejectModal">
+                                    {{ __('ui.reject') }}
                                 </button>
-                            </form>
+                                <!-- Form per accettare l'annuncio -->
+                                <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button class="btn mb-3 py-2 px-5 fw-bold btn-custom-accept w-100">
+                                        {{ __('ui.accept') }}
+                                    </button>
+                                </form>
 
-                            <!-- Modale di conferma rifiuto -->
-                            <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header bg-danger text-white">
-                                            <h5 class="modal-title" id="rejectModalLabel">{{ __('ui.modalTitle') }}
-                                            </h5>
-                                            <button type="button" class="btn-close btn-close-modal"
-                                                data-bs-dismiss="modal" aria-label="Chiudi"></button>
-                                        </div>
-                                        <div class="modal-body text-center">
-                                            {{ __('ui.modalMessage') }}
-                                        </div>
-                                        <div class="modal-footer justify-content-around">
-                                            <button type="button" class="btn  fw-bold btn-custom-accept btn-sm"
-                                                data-bs-dismiss="modal">{{ __('ui.modalRejectMessage') }}</button>
-                                            <!-- Form di conferma -->
-                                            <form action="{{ route('reject', ['ad' => $ad_to_check]) }}"
-                                                method="POST">
-                                                @csrf
-                                                @method('PATCH')
-                                                <button type="submit"
-                                                    class="btn fw-bold btn-custom-reject btn-sm">{{ __('ui.modalAcceptMessage') }}</button>
-                                            </form>
+                                <!-- Modale di conferma rifiuto -->
+                                <div class="modal fade" id="rejectModal" tabindex="-1"
+                                    aria-labelledby="rejectModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-danger text-white">
+                                                <h5 class="modal-title" id="rejectModalLabel">{{ __('ui.modalTitle') }}
+                                                </h5>
+                                                <button type="button" class="btn-close btn-close-modal"
+                                                    data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                {{ __('ui.modalMessage') }}
+                                            </div>
+                                            <div class="modal-footer justify-content-around">
+                                                <button type="button" class="btn  fw-bold btn-custom-accept btn-sm"
+                                                    data-bs-dismiss="modal">{{ __('ui.modalRejectMessage') }}</button>
+                                                <!-- Form di conferma -->
+                                                <form action="{{ route('reject', ['ad' => $ad_to_check]) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('PATCH')
+                                                    <button type="submit"
+                                                        class="btn fw-bold btn-custom-reject btn-sm">{{ __('ui.modalAcceptMessage') }}</button>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {{-- Fine button accetta/rifiuta --}}
+                            <h4 class="mb-4 mt-3">{{ __('ui.author') }}:
+                                <span class="text-color-5">{{ ucfirst($ad_to_check->user->name) }}</span>
+                            </h4>
+                            <h4 class="mb-4">{{ __('ui.price') }}:
+                                <span class="text-color-5">{{ $ad_to_check->price }}€</span>
+                            </h4>
+                            <h4 class="mb-5">
+                                {{ __('ui.category') }}:
+                                <span class="text-color-5">{{ __('ui.' . $ad_to_check->category->name) }}</span>
+                            </h4>
                         </div>
-                        {{-- Fine button accetta/rifiuta --}}
-                        <h4 class="mb-4 mt-3">{{ __('ui.author') }}:
-                            <span class="text-color-5">{{ ucfirst($ad_to_check->user->name) }}</span>
-                        </h4>
-                        <h4 class="mb-4">{{ __('ui.price') }}:
-                            <span class="text-color-5">{{ $ad_to_check->price }}€</span>
-                        </h4>
-                        <h4 class="mb-5">
-                            {{ __('ui.category') }}:
-                            <span class="text-color-5">{{ __('ui.' . $ad_to_check->category->name) }}</span>
-                        </h4>
-                        <h5>
-                            {{ __('ui.description') }}
-                        </h5>
-                        <p class="text-title-show">{{ $ad_to_check->description }}</p>
-                    </div>
 
+                        <div>
+                            <h5>
+                                {{ __('ui.description') }}
+                            </h5>
+                            <p class="text-title-show">{{ $ad_to_check->description }}</p>
+                        </div>
+                    </div>
                 </div>
             @else
                 <div class="row justify-content-center align-items-center height-custom text-center">
@@ -165,7 +170,7 @@
         <div class="container my-5 py-5">
             <div class="row">
                 <!-- Colonna per gli annunci rifiutati -->
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12 text-mobile">
                     @if ($ads_to_reject->isNotEmpty())
                         <h4 class="text-danger text-center">{{ __('ui.rejectedAds') }}</h4>
                         <table class="table table-bordered table-striped shadow-sm">
@@ -202,7 +207,7 @@
                 </div>
 
                 <!-- Colonna per gli annunci accettati -->
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12 text-mobile">
                     @if ($ads_to_accepted->isNotEmpty())
                         <h4 class="text-success text-center">{{ __('ui.acceptedAds') }}</h4>
                         <table class="table table-bordered table-striped shadow-sm">

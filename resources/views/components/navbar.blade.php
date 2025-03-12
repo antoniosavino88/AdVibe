@@ -39,8 +39,8 @@
                 </li>
             </ul>
             <!-- Elementi a destra -->
-            <ul class="navbar-nav ms-auto d-flex align-items-center">
-                <li class="nav-item">
+            <ul class="navbar-nav ms-md-auto d-flex align-items-lg-center align-items-end justify-content-end">
+                <li class="nav-item w-100">
                     <form class="d-flex me-2" role="search" action="{{ route('ad_search') }}" method="GET">
                         <div class="input-group">
                             <input type="search" name="query" class="form-control border-custom"
