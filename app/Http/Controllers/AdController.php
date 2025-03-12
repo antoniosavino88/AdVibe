@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
 
@@ -17,7 +18,7 @@ class AdController extends Controller implements HasMiddleware
     public static function middleware(): array
     {
         return [
-            new Middleware('auth', only: ['insertAd']),
+            new Middleware('auth', only: ['insertAd', 'myAds']),
         ];
     }
 
@@ -107,5 +108,13 @@ class AdController extends Controller implements HasMiddleware
             ->paginate(10);
 
         return view('ad.ad_search', ['ads' => $ads, 'query' => $query]);
+    }
+    
+    // FUNZIONE MOSTRA WISHLIST
+    public function myAds (){
+        $myAds = Auth::user()->ads()->orderBy('created_at', 'desc')->get();
+        $favoriteAds = Auth::user()->savedAds()->orderBy('created_at', 'desc')->get();
+
+        return view('ad.my_ads', compact('myAds', 'favoriteAds'));
     }
 }

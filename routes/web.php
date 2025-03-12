@@ -29,3 +29,6 @@ Route::get('/search/ad', [AdController::class, 'searchAds'])->name('ad_search');
 //ROTTA LINGUA
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
+//ROTTA PARAMETRICA WHISHLIST
+Route::get("/my-ads", [AdController::class, 'myAds'])->name('my.ads');
+
