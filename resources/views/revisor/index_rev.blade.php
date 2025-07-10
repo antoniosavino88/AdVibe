@@ -42,9 +42,9 @@
                         <div class="row d-flex align-items-center">
                             @foreach ($ad_to_check->images as $key => $image)
                                 <div class="col-6 d-flex justify-content-center flex-column p-3 m-4">
-                                    <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid-revisor rounded bg-1"
+                                    <img src="{{ $image->getUrl() }}" class="img-fluid-revisor rounded bg-1"
                                         alt="Immagine {{ $key + 1 }} dell'articolo '{{ $ad_to_check->title }}'">
-                                    <div class="mt-2 text-truncate">
+                                    {{-- <div class="mt-2 text-truncate">
                                         @if ($image->labels)
                                             @foreach ($image->labels as $label)
                                                 #{{ $label }},
@@ -52,10 +52,10 @@
                                         @else
                                             <p class='fst-italic'>No labels</p>
                                         @endif
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 {{-- RATINGS --}}
-                                <div class="col-md-5 mb-4">
+                                {{-- <div class="col-md-5 mb-4">
                                     <ul class="list-group">
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             <span>👤 Adult</span>
@@ -78,7 +78,7 @@
                                             <span class="text-center {{ $image->medical }}"></span>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             @endforeach
                         </div>
 
